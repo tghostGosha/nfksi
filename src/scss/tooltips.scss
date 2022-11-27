@@ -1,0 +1,96 @@
+/////=============Tooltips======================//////
+.tooltip-1 {
+  display: inline-block;
+  position: absolute;
+  right: -23px;
+  top: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.type-card-tooltip {
+  position: relative;
+  margin: 24px 0;
+}
+.type-card-tooltip .tooltip-content {
+  width: 30rem;  
+  left: 41px;
+  text-align: start;
+  @media(max-width: 1176px) {
+    left: 0;
+  }
+  @media(max-width: 585px) {
+    width: 22rem; 
+  }
+}
+.type-card-tooltip .nfk-dot-list-item::before {
+  top: 7px;
+}
+.tooltip-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-text);
+  color: var(--secondary-text);
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip-content {
+  position: absolute;
+  text-align: center;
+    left: -61px;
+  bottom: 150%;
+  background-color: var(--white);
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--primary-text);
+  visibility: hidden;
+  font-size: 12px;
+  line-height: 18px;
+  opacity: 0;
+  width: 10rem;
+  box-shadow: 0px 0px 16px rgba(29, 37, 44, 0.16);
+  transition: var(--animation-transition);
+  @media(max-width: 701px) {
+    left: -94px;
+    width: 8rem;
+    padding: 6px;
+  }
+}
+
+.tooltip-content::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  border-color: #ffffff transparent transparent transparent;
+  bottom: -8px;
+  left: 43%;
+  position: absolute;
+  transition: all 0.2s ease-in-out 0.1s;
+  @media(max-width: 701px) {
+    left: 75%;
+  }
+}
+
+.tooltip-1:hover .tooltip-content,
+.tooltip-1:hover .tooltip-content::after,
+.tooltip-1:active .tooltip-content,
+.tooltip-1:active .tooltip-content::after,
+.type-card-tooltip:hover .tooltip-content,
+.type-card-tooltip:hover .tooltip-content::after,
+.type-card-tooltip:active .tooltip-content,
+.type-card-tooltip:active .tooltip-content::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+//========================================//

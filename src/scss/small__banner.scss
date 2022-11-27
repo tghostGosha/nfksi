@@ -1,0 +1,148 @@
+.small__banner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  background-color: var(--primary-grey);
+  border-radius: 10px;
+
+  @media(max-width: 1176px) {
+    column-gap: 16px;
+  }
+
+  @media(max-width: 585px) {
+    column-gap: 12px;
+    row-gap: 16px;
+    grid-template-rows: 1fr 0.7fr;
+  }
+
+  a,
+  button {
+    margin-top: 0.5rem;
+  }
+
+  &-buttons {
+    display: flex;
+    margin-top: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media(max-width: 585px) {
+      justify-content: space-between;
+    }
+
+    svg {
+      width: 100%;
+      max-width: 168px;
+    }
+  }
+
+  &-btn {
+    padding: 18px 26px;
+  }
+
+  &-left-img {
+    display: flex;
+    justify-content: center;
+    grid-column: 1/span 5;
+    align-items: flex-end;
+    padding-left: 10px;
+
+    @media(max-width: 585px) {
+      grid-column: 4/span 9;
+      grid-row: 2/span 1;
+
+    }
+  }
+
+  &-left-text {
+    padding: 40px 0 40px 46px;
+    grid-column: 1/ span 7;
+
+    @media(max-width: 1176px) {
+      padding: 24px 0 32px 24px;
+    }
+
+    @media(max-width: 585px) {
+      grid-column: 1/ span 12;
+      padding: 24px 10px 0 12px;
+
+    }
+  }
+
+  &-right-img {
+    grid-column: 8/ span 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 10px;
+
+    @media(max-width: 585px) {
+      grid-column: 4/span 9;
+      grid-row: 2/ span 1;
+    }
+  }
+
+  &-right-text {
+    padding: 40px 20px 100px 0;
+    grid-column: 6/span 7;
+
+    @media(max-width: 1176px) {
+      padding: 24px 24px 46px 0;
+    }
+
+    @media(max-width: 585px) {
+      grid-column: 1/span 12;
+      grid-row: 1/span 1;
+      padding: 24px 12px 0 12px;
+    }
+  }
+
+  &-img {
+    display: block;
+  }
+
+  &-title {
+    margin-bottom: var(--mb-24);
+    font-size: 24px;
+    line-height: 28px;
+    font-family: Gilroy;
+    font-weight: 600;
+    @media(max-width: 1176px) {
+      line-height: 28px;
+      font-size: 20px;
+    }
+  
+    @media(max-width: 585px) {
+      line-height: 24px;
+      font-size: 20px;
+    }
+  }
+}
+
+.small__banner-big-title .small__banner-title {
+  font-family: Gilroy;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  @media(min-width: 1200px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  @media(max-width: 585px) {
+    line-height: 34px;
+    font-size: 24px;
+  }
+}
+.small__banner-black .small__banner-title,
+.small__banner-black .small__banner-description{
+  color: var(--white);
+}
+.small__banner-black {
+  background-color: var(--primary-text);
+}
+// .brokers__service-small-banner {
+//   @media(max-width: 585px) {
+//     grid-template-rows: 1fr 0.6fr;
+//   }
+// }
