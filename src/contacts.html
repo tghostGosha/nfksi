@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title": "Контакты"
+})
+
+<body>
+
+  @@include('html/header.html',{})
+  <main>
+    <section class="section-padding">
+      <div class="container">
+        <h2 class="contacts__company-subtitle">Контакты</h2>
+        <p>
+          428034, г. Чебоксары, пр. М. Горького, д. 5, корпус 2
+        </p>
+        <div class="contacts__img-wrapper">
+
+          <svg width="31px" height="50px" class="svg-map-marker-dims cheb-marker">
+            <use xlink:href="img/icons/icons.svg#map-marker"></use>
+          </svg>
+
+          <img src="../img/map.png" alt="М.Горького 5/2">
+        </div>
+
+        <div class="contacts__company-wrapper block__margin-bottom">
+          <div class="contacts__company-tel contacts__company-wrapper-el">
+            <h4 class="tel-title contacts__title">Телефон:</h4>
+            <div>
+              <a href="#" class="contacts-span black-color-link">8 (8352) 62-33-73</a>
+            </div>
+          </div>
+          <div class="contacts__company-schedule contacts__company-wrapper-el">
+            <h4 class="schedule-title contacts__title">График работы:</h4>
+            <span class="schedule-text contacts-span">ПН-ПТ 9:00 – 18:00</span>
+          </div>
+          <div class="contacts__company-email contacts-span contacts__company-wrapper-el">
+            <h4 class="email-title contacts__title">Электронная почта:</h4>
+            <a href="#" class="email-text black-color-link">mail@nfksber.ru</a>
+          </div>
+        </div>
+        <div class="company__requisites">
+          <h2>Реквизиты</h2>
+          <ul class="company__requisites-list">
+            <li class="company__requisites-list-item">Акционерное общество «НФК – Структурные инвестиции» (АО «НФК-СИ»)</li>
+            <li class="company__requisites-list-item">Адрес: 428034, Чувашская Республика, г. Чебоксары, пр. М. Горького, д. 5, корп. 2, пом. 1</li>
+            <li class="company__requisites-list-item">тел./факс: 8(8352) 62-33-73</li>
+            <li class="company__requisites-list-item">ИНН/КПП 2130230136/213001001</li>
+            <li class="company__requisites-list-item">Приволжский ф-л ПАО «Промсвязьбанк» г. Нижний Новгород</li>
+            <li class="company__requisites-list-item">р/с 40701810203000001208</li>
+            <li class="company__requisites-list-item">БИК 042202803</li>
+            <li class="company__requisites-list-item">к/с 30101810700000000803</li>
+            <li class="company__requisites-list-item">Филиал «Нижегородский» АО «АЛЬФА-БАНК» г. Нижний Новгород</li>
+            <li class="company__requisites-list-item">р/с 40701810229040000060</li>
+            <li class="company__requisites-list-item">БИК 042202824</li>
+            <li class="company__requisites-list-item">к/с 30101810200000000824</li>
+            <li class="company__requisites-list-item">Директор Иванова Ирина Геннадьевна, действует на основании Устава</li>
+            <li class="company__requisites-list-item">ОКПО 53171109</li>
+            <li class="company__requisites-list-item">ОКВЭД (основной) 64.91 Деятельность по финансовой аренде (лизингу/сублизингу)</li>
+            <li class="company__requisites-list-item">ОГРН 1222100000704</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('html/footer.html',{})
+
+  <script defer src="js/app.min.js"></script>
+</body>
+
+</html>

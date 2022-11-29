@@ -16,14 +16,15 @@
             <li class="footer__nav-item">
               <a href="https://zberopolis.ru/" target="_blank" class="footer__nav-link">Zберополис</a>
             </li>
-            
+
           </ul>
         </div>
         <div class="footer__nav-adress footer__nav-col">
           <h4 class="footer__nav-title">Адрес:</h4>
-           <p>г.Чебоксары, пр. М. Горького,
-            <br> 
-            д. 5, корпус 2</p> 
+          <p>г.Чебоксары, пр. М. Горького,
+            <br>
+            д. 5, корпус 2
+          </p>
         </div>
         <div class="footer__nav-email footer__nav-col">
           <h4 class="footer__nav-title">Электронная почта:</h4>
@@ -35,7 +36,7 @@
         </div>
       </div>
       <div class="footer__contacts">
-        
+
         <ul class="footer__contacts-social-list">
           <li class="social__list-item">
             <a href="#" class="social__list-icon">
@@ -74,11 +75,101 @@
           </li>
         </ul>
       </div>
-      
+
       <div class="footer__copyright">
         <span class="secondary-text">© 2022 АО «НФК-Структурные Инвестиции». Все права защищены.</span>
       </div>
     </div>
   </div>
+  <!-- modal windows-->
+  <div class="modal-block">
+    <div class="modal-bg">
+      <div class="modal-window">
+        <div class="modal-window-content">
+          <!-- =========Модальное окно 'Консультация'===============-->
+          <div class="modal-window-wrapper  main-consult-modal">
+            <div class="modal-window-consalt-header">
+              <button type="button" class="btn-close"></button>
+            </div>
+            <div class="modal-body">
 
+              <h3 class="modal-title">Заказать звонок</h3>
+
+              <form class="modal__form">
+                <div class="modal__form-item">
+                  <input type="text" class="form-control" id="exampleFormControlInput1"
+                    placeholder="Фамилия, имя и отчество*">
+                </div>
+                <div class="modal__form-item">
+                  <input type="tel" class="form-control" id="exampleFormControlInput" placeholder="Мобильный телефон*">
+                </div>
+                <div class="modal__form-item">
+                  <input type="text" class="form-control" id="exampleFormControlInput2"
+                    placeholder="Удобное время для звонка">
+                </div>
+                <p class="secondary-text form-descr">
+                  * - поля, обязательные для заполнения
+                </p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    <span class="secondary-text">Даю согласие на</span> <a href="#">обработку персональных данных</a>
+                     и <a href="#">подтверждаю
+                      согласие на
+                      коммуникацию</a>
+                  </label>
+                </div>
+                <div class="flex-container">
+                  <button type="submit" class="button primary-button modal__form-btn">Получить консультацию</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+          <!-- =========Модальное окно в инвестиционной карточке 'Оставить заявку'===============-->
+          <div class="modal-window-wrapper  application-modal">
+            <div class="modal-window-consalt-header">
+              <button type="button" class="btn-close"></button>
+            </div>
+            <div class="modal-body">
+
+              <h3 class="modal-title">Заявка на лизинг</h3>
+
+              <form class="modal__form ">
+                <div class="modal__form-item form-name">
+                  <input type="text" class="form-control" id="application-name"
+                    placeholder="Фамилия, имя и отчество*">
+                </div>
+                <div class="modal__form-item form-phone">
+                  <input type="tel" class="form-control" id="application-tel" placeholder="Мобильный телефон*">
+                </div>
+                <div class="modal__form-item form-email">
+                  <input type="email" class="form-control" id="application-mail"
+                    placeholder="Электронная почта">
+                </div>
+                <div class="modal__form-item form-coment">
+                  <textarea type="text" class="form-control" id="application-comment"
+                    placeholder="Сообщение"></textarea>
+                </div>
+                <p class="secondary-text form-descr">
+                  * - поля, обязательные для заполнения
+                </p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="applicationCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    <span class="secondary-text">Даю согласие на</span> <a href="#">обработку персональных данных</a> и <a href="#">подтверждаю согласие на коммуникацию</a>
+                  </label>
+                </div>
+                <div class="flex-container">
+                  <button type="submit" class="button primary-button modal__form-btn">Получить консультацию</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

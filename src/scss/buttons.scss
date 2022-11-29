@@ -3,10 +3,12 @@
   background-color: var(--primary-green);
   color: var(--white);
   border-radius: 5px;
-
+  padding: 14px 32px;
   @media(max-width: 585px) {
     font-size: 14px;
     line-height: 19px;
+    width: 100%;
+    padding: 12px 8px;
   }
 }
 
@@ -22,10 +24,12 @@
   color: var(--primary-text);
   border-radius: 5px;
   line-height: 22px;
-
+  padding: 14px 32px;
   @media(max-width: 585px) {
     font-size: 14px;
     line-height: 19px;
+    padding: 12px 8px;
+    width: 100%;
   }
 }
 
@@ -71,4 +75,12 @@
   color: var(--primary-text);
 }
 
+.btn-close {
+  outline: none;
 
+}
+.btn-close:hover,
+.btn-close:focus {
+  box-shadow: none;
+  color: var(--primary-text);
+}

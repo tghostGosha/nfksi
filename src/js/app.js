@@ -1,5 +1,5 @@
 import * as flsFunctions from "./modules/functions.js";
-
+import $ from "jquery";
 import { Inputmask } from "inputmask";
 import Swiper, { Navigation, Pagination } from 'swiper';
 import JustValidate from 'just-validate';
@@ -12,46 +12,39 @@ import bootstrap from 'bootstrap';
 
 // //==============Модальные окна
 
-// function OpenModalWindow(el) {
-//   CloseModalWindow();
-//   let modal = $('.modal-block');
-//   modal.addClass('open');
-//   el.show();
-// } 
+function OpenModalWindow(el) {
+  CloseModalWindow();
+  let modal = $('.modal-block');
+  modal.addClass('open');
+  el.show();
+} 
 
-// function CloseModalWindow() {
-//   let modal = $('.modal-block');
-//   let forms = $('form', modal);
-//   let formsBlocks = $('.modal-window-content > div', modal)
-//   modal.removeClass('open');
-//   forms.each(function () { this.reset() });
-//   formsBlocks.each(function () { $(this).hide() });
-// }
-// $('#consultModalBtn').on('click', function (event) {
-//   event.preventDefault();
-//   OpenModalWindow($('.consult-modal'));
-// })
-// $('#consultEarnBtn').on('click', function (event) {
-//   event.preventDefault();
-//   OpenModalWindow($('.consult-earn'));
-// })
-// $('.consult-button').on('click', function (event) {
-//   event.preventDefault();
-//   OpenModalWindow($('.main-consult-modal'));
-// })
+function CloseModalWindow() {
+  let modal = $('.modal-block');
+  let forms = $('form', modal);
+  let formsBlocks = $('.modal-window-content > div', modal)
+  modal.removeClass('open');
+  forms.each(function () { this.reset() });
+  formsBlocks.each(function () { $(this).hide() });
+}
 
-// $('#modalCurrencyHistory').on('click', function (event) {
-//   event.preventDefault();
-//   OpenModalWindow($('.currency-history-modal'));
-// })
+$('.application').on('click', function (event) {
+  event.preventDefault();
+  OpenModalWindow($('.application-modal'));
+})
+$('.consult-button').on('click', function (event) {
+  event.preventDefault();
+  OpenModalWindow($('.main-consult-modal'));
+})
 
-// $(document).on('click', '.btn-close, .modal-bg', function () {
-//   CloseModalWindow();
-// });
-// $(document).on('click', '.modal-window', function (e) {
-//   e.stopPropagation();
-// });
-// //================================================
+
+$(document).on('click', '.btn-close, .modal-bg', function () {
+  CloseModalWindow();
+});
+$(document).on('click', '.modal-window', function (e) {
+  e.stopPropagation();
+});
+//================================================
 
 
 
@@ -68,27 +61,13 @@ const nav = document.querySelector('.header__nav-app-list');
 
 
 //==============================
-// $("#header-burger").on("click", function () {
-//   $(".header__nav-app-list").slideToggle("up");
-//   $(" .header-burger-marker, .header-burger").toggleClass("is-active");
-//   $("#window__account-app").hide(500);
-// });
-// $("#closeHeaderNavApp").on("click", function () {
-//   $(".header__nav-app-list").slideToggle();
-// });
-// $("#btnOpen").on("click", function () {
-//   $("#window__account-app").slideToggle("down")
-//   $(".header__nav-app-list").hide(500);
-// });
-// $("#closeWindowAccountApp").on("click", function () {
-//   $("#window__account-app").slideToggle();
+$("#header-burger").on("click", function () {
+  // $(".header__nav-app-list").slideToggle("up");
+  $(".header-burger, .header__nav-app").toggleClass("is-active");
+  // $("#window__account-app").hide(500);
+});
 
-// });
 
-// $(".fa-search").on("click", function () {
-//   $(".wrap").toggle("drop");
-//   $(".wrap, .input, .fa").toggleClass("active");
-// });
 
 
 //=============Появление Header при скролле

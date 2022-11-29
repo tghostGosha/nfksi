@@ -8,7 +8,7 @@
       display: block
     }
   }
-
+ 
   &-dialog {
     // max-width: 816px;
     width: 100%;
@@ -21,14 +21,14 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 10
+    z-index: 1011;
   }
 
   &-window {
     margin: 5% auto;
     flex: 0 0 auto;
     width: 100%;
-    max-width: 908px;
+    max-width: 816px;
     background: var(--white);
     border-radius: 10px;
     position: relative;
@@ -39,20 +39,30 @@
 
     &-content {
       padding: 26px;
-
+      border-top: 12px solid var(--primary-text);
+      border-radius: 10px;
       @media(max-width: 1176px) {
         padding: 12px;
+      }
+      @media(max-width: 850px) {
+        padding: 12px 12px 24px 12px;
       }
     }
 
   }
+  &__form {
+    &-item {
+      
+    }
+  }
 }
 
 .currency-modal-window {
-  max-width: 906px;
+  max-width: 816px;
 }
 
 .modal-title {
+  text-align: center;
   margin-bottom: var(--mb-24);
 }
 
@@ -63,17 +73,20 @@
 }
 
 .modal-window-consalt-header {
-  width: 344px;
-  background-color: var(--primary-grey);
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
 }
 
 .modal-body {
   position: relative;
-  padding-left: 40px ;
-  width: 472px;
+  padding: 0 80px ;
+    & .flex-container {
+      justify-content: center;
+    }
+
+    @media(max-width: 850px) {
+      padding: 0 24px ;
+    }
 }
 
 
@@ -101,3 +114,57 @@
   margin-bottom: 28px;
 
 }
+
+.form-descr {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--grey-button);
+}
+.form-control {
+  background-color: var(--primary-grey);
+  border-radius: 5px;
+  border: none;
+  padding: 16px 26px;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: var(--primary-grey);
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(20, 136, 20, 0.25);
+}
+.form-check-input {
+  outline: 0;
+}
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: var(--primary-green);
+}
+.form-check-input:checked {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.form-check {
+margin: 26px 0 36px 0;
+}
+.modal__form-btn {
+  padding: 14px 157px;
+}
+
+.form-phone,
+.form-email {
+
+  display: inline-block;
+  width: 100%;
+  max-width: 46%;
+  @media(max-width: 635px)  {
+    max-width: 100%;
+  }
+}
+.form-phone {
+  margin-right: 7%;
+  @media(max-width: 635px) {
+    margin-right: 0;
+  }
+}
+
+

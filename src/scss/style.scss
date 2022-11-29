@@ -95,16 +95,18 @@ h1 {
 
 h2 {
 
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 
   @media(min-width: 1200px) {
     font-size: 42px;
-    line-height: 28px;
+    line-height: 42px;
+    margin-bottom: 36px;
   }
 
   @media(max-width: 585px) {
     line-height: 34px;
     font-size: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -137,6 +139,10 @@ h4 {
     font-size: 16px;
     line-height: 30px;
   }
+}
+
+.table>:not(caption)>*>* {
+  padding: 1rem 0.5rem;
 }
 
 .nfk-dot-list {
@@ -178,12 +184,31 @@ h4 {
 }
 
 .hero__container {
-  padding: 143px 0 255px 0;
+  padding: 143px 15px 255px 15px;
   background:
     url('../img/nfk-logo.png') bottom -4rem right /29% no-repeat,
     url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 11rem/32% no-repeat,
     url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 25rem/27% no-repeat;
 
+  @media(max-width: 1176px) {
+    padding: 73px 15px 205px 15px;
+    background:
+    url('../img/nfk-logo.png') bottom -4rem right /29% no-repeat,
+    url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 8rem/32% no-repeat,
+    url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 17rem/27% no-repeat;
+  }
+  @media(max-width: 768px) {
+    background:
+    url('../img/nfk-logo.png') bottom -4rem right /32% no-repeat,
+    url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 8rem/37% no-repeat,
+    url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 17rem/34% no-repeat;
+  }
+  @media(max-width: 585px) {
+    background:
+    url('../img/nfk-logo.png') bottom -4rem right -3rem /69% no-repeat,
+    url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 3rem/78% no-repeat,
+    url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 10rem/67% no-repeat;
+  }
   & p {
     font-size: 24px;
     line-height: 22px;
@@ -191,8 +216,17 @@ h4 {
 }
 
 .small__banner-about {
+  @media(max-width: 585px) {
+    grid-template-rows: 1fr 116px;
+  }
+
   & .small__banner-left-text {
     grid-column: 1/ span 9;
+
+    @media(max-width: 585px) {
+      // padding: 0;
+      grid-column: 1/ span 12;
+    }
   }
 
   & .small__banner-right-img {
@@ -200,6 +234,11 @@ h4 {
     justify-content: flex-end;
     padding-top: 18px;
     padding-right: 0;
+
+    @media(max-width: 585px) {
+      padding: 0;
+      grid-column: 8/ span 6;
+    }
   }
 }
 
@@ -307,6 +346,7 @@ h4 {
 
 .progress__bar {
   width: 100%;
+  max-width: 1170px;
   height: 4px;
   background-color: var(--primary-grey);
   position: relative;
@@ -359,6 +399,11 @@ h4 {
       background-color: var(--primary-grey);
       padding: 24px 16px;
       width: 313px;
+
+      @media(max-width: 1176px) {
+        width: 200px;
+        left: -85px;
+      }
     }
   }
 
@@ -376,6 +421,10 @@ h4 {
   & .nfk-dot-list {
     display: flex;
     align-items: center;
+    @media(max-width: 585px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   & .nfk-dot-list-item:not(:last-child) {
@@ -474,15 +523,19 @@ h4 {
   }
 }
 
-.span__margin-bottom {
-  margin-bottom: 8px;
-  display: inline-block;
+.mb-48 {
+  margin-bottom: 48px;
+
+  @media(max-width: 1176px) {
+    margin-bottom: 36px;
+  }
+
+  @media(max-width: 585px) {
+    margin-bottom: 24px;
+  }
 }
 
-.background-style-global {
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
+
 
 input::placeholder {
   color: var(--secondary-text);
@@ -531,25 +584,6 @@ input::placeholder {
 }
 
 
-
-.svg-arrow-right-dims {
-  width: 4px;
-  height: 8px;
-}
-
-.svg-arrow-left-dims {
-  width: 4px;
-  height: 8px;
-  color: var(--secondary-text);
-  margin: 0;
-  margin-right: 12px;
-
-  @media(max-width: 585px) {
-    margin-right: 12px;
-    width: 4px;
-    height: 8px;
-  }
-}
 
 
 //======левуый аппостроф
@@ -652,10 +686,12 @@ sup {
 //========Ссылка на файл
 .electronic__files-item {
   grid-column: span 4;
+
   @media(max-width: 585px) {
     grid-column: span 12;
   }
 }
+
 .get__file-link {
   display: flex;
   max-width: 750px;
@@ -723,36 +759,232 @@ sup {
 
 
 //========
+.pioner__lising-page {}
 
-.svg-google-play,
-.svg-app-store {
-  width: 100%;
-  max-width: 168px;
-  max-height: 46px;
+.nav-pills {
+  justify-content: center;
+
+  @media(max-width: 1176px) {
+    justify-content: center;
+
+  }
+
+}
+
+.nav-item {
+  grid-column: span 3;
+
+  @media(max-width: 1176px) {
+    grid-column: span 6;
+
+  }
 
   @media(max-width: 585px) {
-    max-width: 156px;
+    grid-column: span 12;
+  }
+
+  & button {
+    width: 283px;
+
+    @media(max-width: 1176px) {
+      width: 100%;
+    }
+
   }
 }
 
-.svg-google-play rect,
-.svg-app-store rect {
-  fill: var(--white);
-  transition: var(--animation-transition);
+.tab-pane {
+  display: none;
 }
 
-.svg-google-play path,
-.svg-app-store path {
-  fill: var(--primary-text);
-  transition: var(--animation-transition);
+.tab-pane.active {
+  display: block;
 }
 
-.svg-google-play:hover rect,
-.svg-app-store:hover rect {
-  fill: var(--secondary-text);
+.nav-pills .nav-link {
+  border-radius: 40px;
+  background-color: var(--primary-grey);
+  color: var(--primary-text);
+  padding: 16px 24px;
+  min-height: 74px;
 }
 
-.svg-google-play:hover path,
-.svg-app-store:hover path {
-  fill: var(--white);
+.nav-pills .nav-link.active {
+  background-color: var(--primary-text);
+  color: var(--white);
+}
+
+.buttons__block {
+  display: flex;
+  justify-content: center;
+
+  & button:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.others-page__banner {
+  @media(max-width: 585px) {
+    grid-template-rows: 1fr 116px;
+  }
+
+  & .small__banner-left-text {
+    grid-column: 1/ span 8;
+
+    @media(max-width: 585px) {
+      grid-column: 1/ span 12;
+    }
+  }
+
+  & .small__banner-right-img {
+    grid-column: 9/ span 4;
+    padding: 0;
+    background:
+      url('../img/icons/icons.svg#pioner-logo') bottom -2rem right -4rem/54% no-repeat,
+      url('../img/icons/icons.svg#nfk-logo') bottom -1rem right 4rem /49% no-repeat;
+
+    @media(max-width: 1176px) {
+      background:
+        url('../img/icons/icons.svg#pioner-logo') bottom -2rem right -4rem/74% no-repeat,
+        url('../img/icons/icons.svg#nfk-logo') bottom -1rem right 50px /67% no-repeat;
+    }
+
+    @media(max-width: 850px) {
+      background:
+        url('../img/icons/icons.svg#pioner-logo') bottom -2rem right -4rem/87% no-repeat,
+        url('../img/icons/icons.svg#nfk-logo') bottom -1rem right 50px /77% no-repeat;
+    }
+
+    @media(max-width: 585px) {
+      grid-column: 1/ span 12;
+      background:
+        url('../img/icons/icons.svg#pioner-logo') bottom -2rem right -4rem/57% no-repeat,
+        url('../img/icons/icons.svg#nfk-logo') bottom -1rem right 30px /47% no-repeat;
+    }
+  }
+}
+
+.options {
+  & .small__banner {
+    padding: 32px 24px;
+    grid-column: span 4;
+
+    @media(max-width: 850px) {
+      grid-column: span 12;
+    }
+
+    @media(max-width: 585px) {
+      grid-template-rows: 1fr;
+    }
+
+    & p {
+      grid-column: span 12;
+    }
+  }
+}
+
+.cheb-map {
+  width: 100%;
+  height: 400px;
+}
+
+.contacts {
+  &__section {
+
+    padding-bottom: 112px;
+
+    @media(max-width: 1176px) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__company-subtitle {
+    margin-bottom: var(--mb-24);
+  }
+
+  &__cheb-title,
+  &__msk-title {
+    margin-bottom: 16px;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    margin-bottom: var(--mb-40);
+    margin-top: 32px;
+
+    @media(max-width: 585px) {
+      margin-top: 24px;
+      height: 424px;
+    }
+  }
+
+  &__company-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 60%;
+
+    @media(max-width: 850px) {
+      max-width: 100%;
+    }
+
+    @media(max-width: 585px) {
+      flex-direction: column;
+    }
+
+
+  }
+
+  &__company-wrapper-el:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &__company-tel {
+    margin-right: 138px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media(max-width: 1176px) {
+      margin: 0;
+    }
+
+    @media(max-width: 585px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__company-schedule {
+    margin-right: 138px;
+
+    @media(max-width: 1176px) {
+      margin: 0;
+    }
+
+    @media(max-width: 585px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+}
+
+.cheb-marker {
+  color: #DD270F;
+  position: absolute;
+  left: 48%;
+  top: 46%
+}
+
+.company__requisites {
+  &-list {
+    display: flex;
+    flex-direction: column;
+
+    &-item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
 }

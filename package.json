@@ -48,6 +48,7 @@
     "gulp-webpcss": "latest",
     "gulp-zip": "latest",
     "inputmask": "latest",
+    "jquery": "^3.6.1",
     "just-validate": "latest",
     "sass": "latest",
     "swiper": "latest",

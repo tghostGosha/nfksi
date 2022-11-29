@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title": "Пионер-Лизинг"
+})
+
+<body>
+
+  @@include('html/header.html',{})
+  <main>
+    <section class="section-padding">
+      <div class="container">
+        <div class="pioner__lising-page">
+          <div class="block__margin-bottom">
+            <h2>В компании действуют 4 лизинговых программы:</h2>
+            <ul class="nav nav-pills grid-container mb-48" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active grey-button" id="bus-tab" data-bs-toggle="tab" data-bs-target="#bus"
+                  type="button" role="tab" aria-controls="bus" aria-selected="true">Лизинг автобусов</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link grey-button" id="auto-tab" data-bs-toggle="tab" data-bs-target="#auto"
+                  type="button" role="tab" aria-controls="award" aria-selected="false">Лизинг автотранспорта</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link grey-button" id="equipment-tab" data-bs-toggle="tab" data-bs-target="#equipment"
+                  type="button" role="tab" aria-controls="equipment" aria-selected="false">Лизинг оборудования и
+                  спецтехники
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link grey-button" id="other-services-tab" data-bs-toggle="tab" data-bs-target="#realty"
+                  type="button" role="tab" aria-controls="realty" aria-selected="false">Лизинг недвижимости
+                </button>
+              </li>
+            </ul>
+            <div class="pioner__lising-content mb-48">
+              <div class="tab-pane active" id="bus" role="tabpanel" aria-labelledby="bus-tab" tabindex="0">
+                <table class="tab-table table">
+                  <thead>
+                    <tr>
+                      <td class="col-6">Объекты лизинга</td>
+                      <td class="col-4">Туристические, междугородние и городские автобусы российского и импортного
+                        производства</td>
+                    </tr>
+                  </thead>
+                  <tbody class="tr-border">
+                    <tr>
+                      <td>Срок лизинга</td>
+                      <td class="primary-text-market td-aligh-end-on375">До 5 лет</td>
+                    </tr>
+                    <tr class="tr-border">
+                      <td>Объем сделки
+                      </td>
+                      <td class="primary-text-market td-aligh-end-on375">От 300 тыс. до 100 млн руб.</td>
+                    </tr>
+                    <tr>
+                      <td>Авансовый платеж </td>
+                      <td class="primary-text-market td-aligh-end-on375">От 0%</td>
+                    </tr>
+                    <tr class="tr-border">
+                      <td>Удорожание от общей стоимости имущества в год</td>
+                      <td class="primary-text-market td-aligh-end-on375">От 2%</td>
+                    </tr>
+                    <tr>
+                      <td>Лизингополучатель</td>
+                      <td class="primary-text-market td-aligh-end-on375">Юридические лица и индивидуальные предприниматели
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane " id="auto" role="tabpanel" aria-labelledby="auto-tab" tabindex="0">
+                <table class="tab-table table">
+                  <thead>
+                    <tr>
+                      <td class="col-6">Объекты лизинга</td>
+                      <td class="col-4">Легковые и грузовые автомобили популярных марок, отечественного и зарубежного
+                        производства</td>
+                    </tr>
+                  </thead>
+                  <tbody class="tr-border">
+                    <tr>
+                      <td>Срок лизинга</td>
+                      <td class="primary-text-market td-aligh-end-on375">До 5 лет</td>
+                    </tr>
+                    <tr class="tr-border">
+                      <td>Скидки от дилеров-партнеров
+                      </td>
+                      <td class="primary-text-market td-aligh-end-on375">до 20% от рекомендованной розничной цены</td>
+                    </tr>
+                    <tr>
+                      <td>Авансовый платеж </td>
+                      <td class="primary-text-market td-aligh-end-on375">От 0%</td>
+                    </tr>
+                    <tr class="tr-border">
+                      <td>Удорожание от общей стоимости имущества в год</td>
+                      <td class="primary-text-market td-aligh-end-on375">От 2%</td>
+                    </tr>
+                    <tr>
+                      <td>Лизингополучатель</td>
+                      <td class="primary-text-market td-aligh-end-on375">Юридические лица, индивидуальные предприниматели
+                        и физические лица</td>
+                    </tr>
+                  </tbody>
+                </table>
+  
+              </div>
+              <div class="tab-pane " id="equipment" role="tabpanel" aria-labelledby="equipment-tab" tabindex="0">
+                <table class="tab-table table">
+                  <thead>
+                    <tr>
+                      <td class="col-6">Объекты лизинга</td>
+                      <td class="col-4">Оборудование для различных видов деятельности, дорожно-строительная, коммунальная,
+                        с/х техника</td>
+                    </tr>
+                  </thead>
+                  <tbody class="tr-border">
+                    <tr>
+                      <td>Срок лизинга</td>
+                      <td class="primary-text-market td-aligh-end-on375">До 5 лет</td>
+                    </tr>
+                    <tr class="tr-border">
+                      <td>Скидки от дилеров-партнеров
+                      </td>
+                      <td class="primary-text-market td-aligh-end-on375">до 10% от рекомендованной розничной цены</td>
+                    </tr>
+                    <tr>
+                      <td>Авансовый платеж </td>
+                      <td class="primary-text-market td-aligh-end-on375">От 10%</td>
+                    </tr>
+                    <tr class="tr-border">
+                      <td>Удорожание от общей стоимости имущества в год</td>
+                      <td class="primary-text-market td-aligh-end-on375">От 5%</td>
+                    </tr>
+                    <tr>
+                      <td>Лизингополучатель</td>
+                      <td class="primary-text-market td-aligh-end-on375">Юридические лица, индивидуальные предприниматели
+                        и физические лица</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tab-pane " id="realty" role="tabpanel" aria-labelledby="realty-tab" tabindex="0">
+                <table class="tab-table table">
+                  <thead>
+                    <tr>
+                      <td class="col-6">Объекты лизинга</td>
+                      <td class="col-4">Здания и помещения коммерческого назначения (производственные, офисные, складские,
+                        торговые и др.)</td>
+                    </tr>
+                  </thead>
+                  <tbody class="tr-border">
+                    <tr>
+                      <td>Срок лизинга</td>
+                      <td class="primary-text-market td-aligh-end-on375">до 25 лет</td>
+                    </tr>
+                    <tr class="tr-border">
+                      <td>Объем сделки
+                      </td>
+                      <td class="primary-text-market td-aligh-end-on375">от 300 тыс. до 100 млн руб.</td>
+                    </tr>
+                    <tr>
+                      <td>Авансовый платеж </td>
+                      <td class="primary-text-market td-aligh-end-on375">От 10%</td>
+                    </tr>
+                    <tr class="tr-border">
+                      <td>Удорожание от общей стоимости имущества в год</td>
+                      <td class="primary-text-market td-aligh-end-on375">От 8%</td>
+                    </tr>
+                    <tr>
+                      <td>Лизингополучатель</td>
+                      <td class="primary-text-market td-aligh-end-on375">Юридические лица, индивидуальные предприниматели
+                        и физические лица</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="buttons__block ">
+              <button type="button" class="grey-button application">Оставить заявку</button>
+              <button type="button" class="primary-button consult-button" >Получить консультацию</button>
+            </div>
+          </div>
+          <h2>Преимущества лизинга:</h2>
+          <ul class="nfk-dot-list block__margin-bottom">
+            <li class="nfk-dot-list-item">Вы платите ежемесячные взносы за «свое» имущество – по договору финансовой аренды с последующим выкупом</li>
+            <li class="nfk-dot-list-item">Вы точно знаете, сколько лизинговых платежей Вам нужно будет внести и какими суммами</li>
+            <li class="nfk-dot-list-item">Лизинговые платежи признаются расходами лизингополучателя и уменьшают налогооблагаемую базу по налогу на прибыль</li>
+            <li class="nfk-dot-list-item">Если Ваша компания является плательщиком НДС, то с суммы лизинговых платежей НДС возмещается в полном объеме</li>
+            <li class="nfk-dot-list-item">При нахождении предмета лизинга на балансе предприятия, Вы, благодаря применению ускоренного механизма амортизации (с коэффициентом до 3), значительно сэкономите на налоге на прибыль</li>
+            <li class="nfk-dot-list-item">Доступно заключение договоров лизинга без авансового платежа.</li>
+          </ul>
+          <h2>Документы</h2>
+          <ul class="grid-container">
+            <li class="electronic__files-item">
+              <a href="#" class="get__file-link">
+                <div class="file-link-svg-container">
+                  <span>PDF</span>
+                  <svg width="48px" height="48px" class="svg-file-download-dims">
+                    <use xlink:href="img/icons/icons.svg#file-download"></use>
+                  </svg>
+                </div>
+                <div class="file__link-text">
+                  <span> Раскрытие информации</span>
+                  <span class="secondary-text">Изменено: 29.03.2020</span>
+                  <!-- <span class="secondary-text">Публикация: 03.11.2021</span>
+                  <span class="secondary-text">Актуальность: с 10.11.2021 по настоящее время</span> -->
+
+                </div>
+              </a>
+            </li>
+            <li class="electronic__files-item">
+              <a href="#" class="get__file-link">
+                <div class="file-link-svg-container">
+                  <span>PDF</span>
+                  <svg width="48px" height="48px" class="svg-file-download-dims">
+                    <use xlink:href="img/icons/icons.svg#file-download"></use>
+                  </svg>
+                </div>
+                <div class="file__link-text">
+                  <span> Раскрытие информации</span>
+                  <span class="secondary-text">Изменено: 29.03.2020</span>
+                  <!-- <span class="secondary-text">Публикация: 03.11.2021</span>
+                  <span class="secondary-text">Актуальность: с 10.11.2021 по настоящее время</span> -->
+
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('html/footer.html',{})
+
+  <script defer src="js/app.min.js"></script>
+</body>
+
+</html>
