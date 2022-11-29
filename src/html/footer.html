@@ -95,13 +95,13 @@
 
               <h3 class="modal-title">Заказать звонок</h3>
 
-              <form class="modal__form">
+              <form class="modal__form" id="consultForm">
                 <div class="modal__form-item">
-                  <input type="text" class="form-control" id="exampleFormControlInput1"
+                  <input type="text" class="form-control" id="consultName"
                     placeholder="Фамилия, имя и отчество*">
                 </div>
                 <div class="modal__form-item">
-                  <input type="tel" class="form-control" id="exampleFormControlInput" placeholder="Мобильный телефон*">
+                  <input type="tel" class="form-control" id="consultTel" placeholder="Мобильный телефон*">
                 </div>
                 <div class="modal__form-item">
                   <input type="text" class="form-control" id="exampleFormControlInput2"
@@ -135,7 +135,7 @@
 
               <h3 class="modal-title">Заявка на лизинг</h3>
 
-              <form class="modal__form ">
+              <form class="modal__form needs-validation" id="applicationForm" novalidate>
                 <div class="modal__form-item form-name">
                   <input type="text" class="form-control" id="application-name"
                     placeholder="Фамилия, имя и отчество*">

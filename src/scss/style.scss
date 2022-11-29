@@ -193,22 +193,25 @@ h4 {
   @media(max-width: 1176px) {
     padding: 73px 15px 205px 15px;
     background:
-    url('../img/nfk-logo.png') bottom -4rem right /29% no-repeat,
-    url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 8rem/32% no-repeat,
-    url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 17rem/27% no-repeat;
+      url('../img/nfk-logo.png') bottom -4rem right /29% no-repeat,
+      url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 8rem/32% no-repeat,
+      url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 17rem/27% no-repeat;
   }
+
   @media(max-width: 768px) {
     background:
-    url('../img/nfk-logo.png') bottom -4rem right /32% no-repeat,
-    url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 8rem/37% no-repeat,
-    url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 17rem/34% no-repeat;
+      url('../img/nfk-logo.png') bottom -4rem right /32% no-repeat,
+      url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 8rem/37% no-repeat,
+      url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 17rem/34% no-repeat;
   }
+
   @media(max-width: 585px) {
     background:
-    url('../img/nfk-logo.png') bottom -4rem right -3rem /69% no-repeat,
-    url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 3rem/78% no-repeat,
-    url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 10rem/67% no-repeat;
+      url('../img/nfk-logo.png') bottom -4rem right -3rem /69% no-repeat,
+      url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 3rem/78% no-repeat,
+      url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 10rem/67% no-repeat;
   }
+
   & p {
     font-size: 24px;
     line-height: 22px;
@@ -242,6 +245,55 @@ h4 {
   }
 }
 
+.swiper {
+  @media(max-width: 768px) {
+    padding: 0 23px;
+    // overflow: visible;
+  }
+
+  // @media(max-width: 585px) {
+  //   overflow: visible;
+  // }
+}
+
+.swiper .grid-container {
+  @media(max-width: 768px) {
+    display: flex;
+    column-gap: 0;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+
+  @media(max-width: 768px) {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background-color: var(--white);
+    box-shadow: 0px 0px 7px rgba(29, 37, 44, 0.11);
+    top: 45%;
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  width: 8px;
+  height: 16px;
+  font-size: 16px;
+  color: var(--primary-text);
+}
+
 .slide {
   grid-column: span 4;
 }
@@ -250,13 +302,23 @@ h4 {
   padding: 32px 42px;
   width: 70%;
   margin: 0 auto;
-  margin-bottom: 36px;
+  // margin-bottom: 36px;
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
 
   & .small__banner-left-img {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     grid-column: 1/ span 6;
+
+    @media(max-width: 768px) {
+      grid-row: 1/span 1;
+      align-items: center;
+      grid-column: span 12;
+    }
 
     & h3 {
       margin: 0;
@@ -276,12 +338,30 @@ h4 {
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 15px;
+
+    @media(max-width: 768px) {
+      grid-row: 2/span 1;
+      grid-column: span 12;
+    }
   }
+}
+
+.vertical-line {
+  background-color: var(--primary-grey);
+  margin: 0 auto;
+  width: 11px;
+  height: 38px;
+
 }
 
 .child__banner {
   padding: 36px 24px;
   row-gap: 24px;
+
+  @media(max-width: 768px) {
+    padding: 24px 12px;
+    grid-template-rows: 1fr;
+  }
 
   // width: 33%;
   & .small__banner-left-img {
@@ -291,6 +371,11 @@ h4 {
     align-items: flex-start;
     padding: 0;
 
+    @media(max-width: 768px) {
+      grid-row: 1/span 1;
+      align-items: center;
+    }
+
     & h3 {
       margin: 0;
       margin-bottom: 1.5rem;
@@ -299,6 +384,11 @@ h4 {
     & img {
       width: 313px;
       height: 82px;
+
+      @media(max-width: 768px) {
+        width: 220px;
+        height: 62px;
+      }
     }
   }
 
@@ -306,14 +396,18 @@ h4 {
     grid-column: 1/ span 12;
     padding: 0;
 
+    @media(max-width: 768px) {
+      grid-row: 2/span 1;
+    }
+
     & .nfk-dot-list {
       margin-top: 16px;
     }
   }
 
-  &:not(:last-child) {
-    margin-bottom: 36px;
-  }
+  // &:not(:last-child) {
+  //   margin-bottom: 36px;
+  // }
 }
 
 .about__company {
@@ -323,11 +417,20 @@ h4 {
     grid-column: 1/ span 9;
     font-size: 20px;
     line-height: 28px;
+
+    @media(max-width: 768px) {
+      grid-column: span 12;
+    }
   }
 
   & .small__banner {
     grid-column: span 6;
     padding: 32px 24px;
+
+    @media(max-width: 585px) {
+      grid-column: span 12;
+      grid-template-rows: 1fr;
+    }
 
     & .small__banner-left-text {
       grid-column: span 12;
@@ -338,9 +441,14 @@ h4 {
 
 .important__history {
   margin-bottom: 209px;
-
+  @media(max-width: 768px) {
+    margin-bottom: 96px;
+  }
   & h2 {
     margin-bottom: 96px;
+    @media(max-width: 768px) {
+      margin-bottom: 48px;
+    }
   }
 }
 
@@ -354,6 +462,12 @@ h4 {
   align-items: center;
   justify-content: center;
 
+  @media(max-width: 768px) {
+    max-width: 4px;
+    height: 554px;
+    flex-direction: column;
+    margin-left: 19px;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -362,6 +476,10 @@ h4 {
     width: 12px;
     height: 12px;
     left: 0;
+    @media(max-width: 768px) {
+      top: 0;
+      left: -4px;
+    }
   }
 
   &::after {
@@ -371,10 +489,14 @@ h4 {
     height: 25px;
     background-color: transparent;
     border-top: 4px solid var(--primary-grey);
-
     border-right: 4px solid var(--primary-grey);
     right: -2px;
     transform: rotate(45deg);
+    @media(max-width: 768px) {
+      bottom: 0;
+      transform: rotate(135deg);
+      right: -10px;
+    }
   }
 
   & .progress-step {
@@ -388,6 +510,11 @@ h4 {
       position: absolute;
       top: -40px;
       left: -44px;
+      @media(max-width: 768px)  {
+        top: -29px;
+        left: 50px;
+        margin: 0;
+      }
     }
 
     & .date-description {
@@ -404,11 +531,20 @@ h4 {
         width: 200px;
         left: -85px;
       }
+      @media(max-width: 768px)  {
+        top: 34px;
+        left: 50px;
+        width: 260px;
+        display: inline-table;
+      }
     }
   }
 
   & .progress-step:nth-child(2) {
     margin: 0 30%;
+    @media(max-width: 768px)  {
+      margin: 10rem 0;
+    }
   }
 }
 
@@ -421,6 +557,7 @@ h4 {
   & .nfk-dot-list {
     display: flex;
     align-items: center;
+
     @media(max-width: 585px) {
       flex-direction: column;
       align-items: flex-start;
@@ -439,18 +576,32 @@ h4 {
 .composition-of-shareholders {
   &-header {
     padding: 16px 0 16px 48px;
-
+    @media(max-width: 585px) {
+      padding: 16px 0 16px 16px;
+    }
     & span:not(:last-child) {
       margin-right: 26%;
+      @media(max-width: 1176px) {
+        margin-right: 17%;
+      }
+      @media(max-width: 768px) {
+        margin-right: 11%;
+      }
     }
   }
 
   & .small__banner {
     padding: 36px 0 36px 48px;
-
+    @media(max-width: 585px) {
+      padding: 24px 0 86px 16px;
+      grid-template-rows: 1fr;
+    }
     & .small__banner-left-text {
       padding: 0;
       grid-column: 1 / span 3;
+      @media(max-width: 585px) {
+        grid-column: 1 / span 6;
+      }
     }
 
     & .small__banner-right-img {
@@ -458,6 +609,12 @@ h4 {
       align-items: center;
       grid-column: 6 / span 3;
       justify-content: flex-start;
+      @media(max-width: 585px) {
+        grid-row: 1/ span 1;
+        grid-column: 7 / span 6;
+        align-items: flex-start;
+        justify-content: center;
+      }
 
       & span {
         font-family: Gilroy, sans-serif;
@@ -465,6 +622,9 @@ h4 {
         font-weight: 600;
         font-size: 64px;
         line-height: 22px;
+        @media(max-width: 585px)  {
+          font-size: 48px;
+        }
       }
     }
   }
@@ -478,6 +638,15 @@ h4 {
     background-repeat: no-repeat;
     background-position: right -2rem bottom -2rem;
     background-size: 12%;
+    @media(max-width: 1176px) {
+      background-size: 18%;
+    }
+    @media(max-width: 768px) {
+      background-size: 22%;
+    }
+    @media(max-width: 585px) {
+      background-size: 38%;
+    }
   }
 
   & .nfk__banner {
@@ -485,19 +654,39 @@ h4 {
     background-repeat: no-repeat;
     background-position: right -2rem bottom -2rem;
     background-size: 12%;
+    @media(max-width: 1176px) {
+      background-size: 18%;
+    }
+    @media(max-width: 768px) {
+      background-size: 22%;
+    }
+    @media(max-width: 585px) {
+      background-size: 38%;
+    }
   }
 }
 
 .person {
   .small__banner {
     grid-column: span 6;
+    @media(max-width: 768px) {
+      grid-column: span 12;
+      grid-template-rows: 100px 1fr;
+    }
 
     & .small__banner-left-img {
       grid-column: 1/ span 6;
+      @media(max-width: 768px) {
+        grid-column: span 12;
+        justify-self: flex-end;
+      }
     }
 
     & .small__banner-right-text {
       grid-column: 7/ span 6;
+      @media(max-width: 768px) {
+        grid-column: span 8;
+      }
     }
   }
 }

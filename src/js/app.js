@@ -1,7 +1,12 @@
 import * as flsFunctions from "./modules/functions.js";
 import $ from "jquery";
-import { Inputmask } from "inputmask";
-import Swiper, { Navigation, Pagination } from 'swiper';
+import {
+  Inputmask
+} from "inputmask";
+import Swiper, {
+  Navigation,
+  Pagination
+} from 'swiper';
 import JustValidate from 'just-validate';
 import wNumb from 'wnumb';
 import Choices from 'choices.js';
@@ -17,15 +22,19 @@ function OpenModalWindow(el) {
   let modal = $('.modal-block');
   modal.addClass('open');
   el.show();
-} 
+}
 
 function CloseModalWindow() {
   let modal = $('.modal-block');
   let forms = $('form', modal);
   let formsBlocks = $('.modal-window-content > div', modal)
   modal.removeClass('open');
-  forms.each(function () { this.reset() });
-  formsBlocks.each(function () { $(this).hide() });
+  forms.each(function () {
+    this.reset()
+  });
+  formsBlocks.each(function () {
+    $(this).hide()
+  });
 }
 
 $('.application').on('click', function (event) {
@@ -47,16 +56,12 @@ $(document).on('click', '.modal-window', function (e) {
 //================================================
 
 
-
-//=====================
-Swiper.use([Navigation, Pagination])
-
 //======включаем создание WEbp ====
 // flsFunctions.isWebp()
-//======включаем создание === 
-const burger = document.querySelector('.header-burger');
-const greyBackground = document.querySelector('.grey-background-640px');
-const nav = document.querySelector('.header__nav-app-list');
+// //======включаем создание === 
+// const burger = document.querySelector('.header-burger');
+// const greyBackground = document.querySelector('.grey-background-640px');
+// const nav = document.querySelector('.header__nav-app-list');
 
 
 
@@ -75,75 +80,52 @@ let lastScroll = 0;
 const defaultOffset = 200;
 const header = document.querySelector('.header');
 
-const scrollPosition = () =>  window.pageYOffset || document.documentElement.scrollTop;
+const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 const containHeight = () => header.classList.contains('header-hide');
 
 window.addEventListener('scroll', () => {
-  if(scrollPosition() > lastScroll && !containHeight() && scrollPosition() > defaultOffset) {
+  if (scrollPosition() > lastScroll && !containHeight() && scrollPosition() > defaultOffset) {
     header.classList.add('header-hide');
     // header.style.boxShadow = '0px -2px 5px rgb(0 0 0 / 69%)';
-  } 
-  else if (scrollPosition() < lastScroll && containHeight()) {
+  } else if (scrollPosition() < lastScroll && containHeight()) {
     header.classList.remove('header-hide');
-   
+
   }
-  
-  
+
   lastScroll = scrollPosition()
 })
 
 
+//===========swiper ======
 
+let swiper = Swiper;
+let init = false;
 
-// //===========swiper ideas======
-// const ideasSwiper = new Swiper('.ideas-swiper', {
-//   modules: [Navigation, Pagination],
-//   slideClass: 'ideas__slide',
-//   slidesPerView: 1,
-//   slidesPerGroup: 1,
-//   slidesPerColumn: 1,
+function swiperCard() {
+  let mobile = window.matchMedia("(min-width: 0px) and (max-width: 768px)");
 
-//   // spaceBetween: 16,
-//   // modifierClass: 'ideas-swiper-pagination',
-//   pagination: {
-//     el: '.ideas-swiper-pagination',
-//     clickable: true,
-//     bulletClass: 'ideas-swiper-pagination-bullet',
-//     horizontalClass: 'ideas-swiper-pagination-horizontal',
-//     bulletActiveClass: 'swiper-bullet-active'
-//   },
-//   navigation: {
-//     hideOnClick: true,
-//     clickable: true,
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
+  if (mobile.matches) {
+    if (!init) {
+      init = true;
+      swiper = new Swiper(".swiper", {
+        modules: [Pagination],
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 16,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    }
+  } else if (init){
+    swiper.destroy();
+    init = false;
+  }
+}
 
-//   breakpoints: {
-//     1176: {
-//       slidesPerView: 3,
-//       slidesPerGroup: 3,
-//       centeredSlides: false,
-//       slidesPerColumn: 3,
-//       spaceBetween: 32,
-//     },
-//     595: {
-//       slidesPerView: 2,
-//       slidesPerGroup: 1,
-//       centeredSlides: false,
-//       slidesPerColumn: 2,
-//       spaceBetween: 16,
-//     },
-
-//     324: {
-//       slidesPerView: "auto",
-//       centeredSlides: true,
-//       slidesPerGroup: 1,
-//       slidesPerColumn: 1,
-//       spaceBetween: 16
-//     }
-//   }
-// })
+swiperCard();
+window.addEventListener("resize", swiperCard);
 
 // //====делаем первую букву  в Верхнем регистре
 // const regex = /[A-Za-z0-0]/;
@@ -234,102 +216,115 @@ window.addEventListener('scroll', () => {
 
 // }
 
-// //=======Валидация
-// try {
-//   const validation = new JustValidate('#accountform', {
-//     errorFieldCssClass: 'is-invalid',
-//     errorLabelStyle: {
-//       fontSize: '14px',
-//       color: '#dc3545',
-//     },
-//     successFieldCssClass: 'is-valid',
-//     successLabelStyle: {
-//       fontSize: '14px',
-//       color: '#20b418',
+//=======Валидация 'Оставить заявку'
+try {
+  const validation = new JustValidate('#applicationForm', {
+    errorFieldCssClass: 'is-invalid',
+    errorLabelStyle: {
+      fontSize: '14px',
+      color: '#dc3545',
+    },
+    successFieldCssClass: 'is-valid',
+    successLabelStyle: {
+      fontSize: '14px',
+      color: '#20b418',
 
-//     },
-//     successFieldStyle: {
-//       border: '1px solid #44953D',
-//     },
-//     focusInvalidField: true,
-//     lockForm: true,
-//   });
-//   validation
-//     .addField('#firstname', [
-//       {
-//         rule: 'minLength',
-//         value: 3,
-//         errorMessage: 'Фамилия должна содержать не менее 3-х символов ',
-//       },
-//       {
-//         rule: 'maxLength',
-//         value: 30,
-//       },
-//       {
-//         rule: 'required',
-//         errorMessage: 'Обязательное поле',
-//       },
-//     ])
-//     .addField('#secondname', [
-//       {
-//         rule: 'minLength',
-//         value: 2,
-//         errorMessage: 'Имя должно содержать не менее 2-х символов ',
-//       },
-//       {
-//         rule: 'maxLength',
-//         value: 30,
-//       },
-//       {
-//         rule: 'required',
-//         errorMessage: 'Обязательное поле',
-//       },
-//     ])
-//     .addField('#surname', [
-//       {
-//         rule: 'minLength',
-//         value: 3,
-//         errorMessage: 'Отчество должно содержать не менее 3-х символов ',
-//       },
-//       {
-//         rule: 'maxLength',
-//         value: 30,
-//       },
-//       {
-//         rule: 'required',
-//         errorMessage: 'Обязательное поле',
-//       },
-//     ])
-//     .addField('#mail', [
-//       {
-//         rule: 'required',
-//         errorMessage: 'Обязательное поле',
-//       },
-//       {
-//         rule: 'email',
-//         errorMessage: 'Не валидный Email',
-//       },
-//     ])
-//     .addField('#tel', [
-//       {
-//         rule: 'required',
-//         errorMessage: 'Обязательное поле',
-//       },
-//     ])
-//     .addField('#accountCheck', [
-//       {
-//         rule: 'required',
-//         errorMessage: 'Подтвердите',
-//       },
-//     ])
-//     // {
-//     //   successMessage: 'Силён! с первой попытки'
-//     // }
-//     .onSuccess((ev) => {
-//       ev.preventDefault();
-//       window.showNotification();
-//     });
-// } catch (error) {
+    },
+    successFieldStyle: {
+      border: '1px solid #44953D',
+    },
+    focusInvalidField: true,
+    lockForm: true,
+  });
+  validation
+    .addField('#application-name', [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Фамилия должна содержать не менее 3-х символов ',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+      },
+      {
+        rule: 'required',
+        errorMessage: 'Обязательное поле',
+      },
+    ])
+   
+    .addField('#application-tel', [
+      {
+        rule: 'required',
+        errorMessage: 'Обязательное поле',
+      },
+    ])
+    .addField('#applicationCheckChecked', [
+      {
+        rule: 'required',
+        errorMessage: 'Подтвердите',
+      },
+    ])
+    .onSuccess((ev) => {
+      ev.preventDefault();
+      window.showNotification();
+    });
+} catch (error) {
 
-// }
+}
+// Валидация 'Консультация'
+try {
+  const validation = new JustValidate('#consultForm', {
+    errorFieldCssClass: 'is-invalid',
+    errorLabelStyle: {
+      fontSize: '14px',
+      color: '#dc3545',
+    },
+    successFieldCssClass: 'is-valid',
+    successLabelStyle: {
+      fontSize: '14px',
+      color: '#20b418',
 
+    },
+    successFieldStyle: {
+      border: '1px solid #44953D',
+    },
+    focusInvalidField: true,
+    lockForm: true,
+  });
+  validation
+    .addField('#consultName', [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Фамилия должна содержать не менее 3-х символов ',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+      },
+      {
+        rule: 'required',
+        errorMessage: 'Обязательное поле',
+      },
+    ])
+   
+    .addField('#consultTel', [
+      {
+        rule: 'required',
+        errorMessage: 'Обязательное поле',
+      },
+    ])
+    .addField('#flexCheckChecked', [
+      {
+        rule: 'required',
+        errorMessage: 'Подтвердите',
+      },
+    ])
+    .onSuccess((ev) => {
+      ev.preventDefault();
+      window.showNotification();
+    });
+} catch (error) {
+
+}
