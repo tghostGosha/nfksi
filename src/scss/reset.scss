@@ -32,7 +32,9 @@ a {
 // a:hover {
 //   color: inherit;
 // }
-
+picture  {
+  display: contents;
+}
 ul,
 li {
   list-style: none;

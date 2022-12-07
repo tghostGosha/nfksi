@@ -124,9 +124,13 @@ function swiperCard() {
     init = false;
   }
 }
+try {
 
-swiperCard();
-window.addEventListener("resize", swiperCard);
+  swiperCard();
+  window.addEventListener("resize", swiperCard);
+} catch (error ){
+
+}
 
 // //====делаем первую букву  в Верхнем регистре
 // const regex = /[A-Za-z0-0]/;

@@ -145,6 +145,10 @@ h4 {
   padding: 1rem 0.5rem;
 }
 
+td {
+  vertical-align: text-top;
+}
+
 .nfk-dot-list {
   padding-left: 20px;
 
@@ -968,9 +972,9 @@ sup {
 
   }
 
-  @media(max-width: 585px) {
-    grid-column: span 12;
-  }
+  // @media(max-width: 585px) {
+  //   grid-column: span 12;
+  // }
 
   & button {
     width: 283px;
@@ -981,7 +985,6 @@ sup {
 
   }
 }
-
 .tab-pane {
   display: none;
 }
@@ -996,7 +999,11 @@ sup {
   color: var(--primary-text);
   padding: 16px 24px;
   min-height: 74px;
+  @media(max-width: 585px)  {
+    font-size: 12px;
+  }
 }
+
 
 .nav-pills .nav-link.active {
   background-color: var(--primary-text);
@@ -1014,7 +1021,7 @@ sup {
 
 .others-page__banner {
   @media(max-width: 585px) {
-    grid-template-rows: 1fr 116px;
+    grid-template-rows: 1fr 129px;
   }
 
   & .small__banner-left-text {
