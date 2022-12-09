@@ -263,6 +263,10 @@ input::placeholder {
   }
 
 }
+.header__nav-item_active {
+  font-weight: bold;
+  color: var(--primary-green);
+}
 
 //======dropdown
 
