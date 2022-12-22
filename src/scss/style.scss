@@ -2,7 +2,6 @@
 @import "../../node_modules/swiper/swiper.scss";
 @import "../../node_modules/swiper/modules/navigation/navigation.scss";
 
-
 @import "normalize";
 @import "bootstrap";
 @import "bootstrap-icons";
@@ -24,7 +23,6 @@
 @import "breadcrumb";
 @import "tooltips";
 
-
 body {
   font-family: Segoe UI, sans-serif;
   font-size: 16px;
@@ -34,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     font-size: 14px;
     line-height: 19px;
   }
@@ -54,11 +52,11 @@ body {
 main {
   padding-top: 83px;
 
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     padding-top: 84px;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     padding-top: 56px;
   }
 }
@@ -68,12 +66,12 @@ main {
   padding: 0 20px;
   margin: 0 auto;
 
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     max-width: 834px;
     padding: 0 16px;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     max-width: 375px;
     padding: 0 12px;
   }
@@ -82,28 +80,27 @@ main {
 h1 {
   margin-bottom: 32px;
 
-  @media(min-width: 1200px) {
+  @media (min-width: 1200px) {
     font-size: 48px;
     line-height: 28px;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     line-height: 40px;
     font-size: 32px;
   }
 }
 
 h2 {
-
   margin-bottom: 48px;
 
-  @media(min-width: 1200px) {
+  @media (min-width: 1200px) {
     font-size: 42px;
     line-height: 42px;
     margin-bottom: 36px;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     line-height: 34px;
     font-size: 24px;
     margin-bottom: 24px;
@@ -111,23 +108,22 @@ h2 {
 }
 
 h3 {
-  @media(min-width: 1200px) {
+  @media (min-width: 1200px) {
     font-size: 24px;
     line-height: 28px;
   }
 
   margin-bottom: var(--mb-24);
 
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     line-height: 28px;
     font-size: 20px;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     line-height: 24px;
     font-size: 20px;
   }
-
 }
 
 h4 {
@@ -135,13 +131,13 @@ h4 {
   font-size: 16px;
   line-height: 21px;
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     font-size: 16px;
     line-height: 30px;
   }
 }
 
-.table>:not(caption)>*>* {
+.table > :not(caption) > * > * {
   padding: 1rem 0.5rem;
 }
 
@@ -156,11 +152,11 @@ td {
     position: relative;
     grid-column: span 6;
 
-    @media(max-width: 1176px) {
+    @media (max-width: 1176px) {
       grid-column: span 12;
     }
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       font-size: 14px;
       line-height: 20px;
     }
@@ -171,7 +167,7 @@ td {
   }
 
   &-item::before {
-    content: '';
+    content: "";
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -180,7 +176,7 @@ td {
     top: 10px;
     left: -20px;
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       top: 7px;
       left: -15px;
     }
@@ -189,33 +185,32 @@ td {
 
 .hero__container {
   padding: 143px 15px 255px 15px;
-  background:
-    url('../img/nfk-logo.png') bottom -4rem right /29% no-repeat,
-    url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 11rem/32% no-repeat,
-    url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 25rem/27% no-repeat;
+  background: url("../img/nfk-logo.png") bottom -4rem right / 29% no-repeat,
+    url("../img/icons/icons.svg#pioner-logo") bottom -4rem right 11rem/32% no-repeat,
+    url("../img/icons/icons.svg#anyPact-logotip") bottom -4rem right 25rem/27% no-repeat;
 
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     padding: 73px 15px 205px 15px;
-    background:
-      url('../img/nfk-logo.png') bottom -4rem right /29% no-repeat,
-      url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 8rem/32% no-repeat,
-      url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 17rem/27% no-repeat;
+    background: url("../img/nfk-logo.png") bottom -4rem right / 29% no-repeat,
+      url("../img/icons/icons.svg#pioner-logo") bottom -4rem right 8rem/32% no-repeat,
+      url("../img/icons/icons.svg#anyPact-logotip") bottom -4rem right 17rem/27%
+        no-repeat;
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 73px 15px 205px 15px;
-    background:
-      url('../img/nfk-logo.png') bottom -4rem right /32% no-repeat,
-      url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 8rem/37% no-repeat,
-      url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 17rem/34% no-repeat;
+    background: url("../img/nfk-logo.png") bottom -4rem right / 32% no-repeat,
+      url("../img/icons/icons.svg#pioner-logo") bottom -4rem right 8rem/37% no-repeat,
+      url("../img/icons/icons.svg#anyPact-logotip") bottom -4rem right 17rem/34%
+        no-repeat;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     padding: 73px 15px 205px 15px;
-    background:
-      url('../img/nfk-logo.png') bottom -4rem right -3rem /69% no-repeat,
-      url('../img/icons/icons.svg#pioner-logo') bottom -4rem right 3rem/78% no-repeat,
-      url('../img/icons/icons.svg#anyPact-logotip') bottom -4rem right 10rem/67% no-repeat;
+    background: url("../img/nfk-logo.png") bottom -4rem right -3rem /69% no-repeat,
+      url("../img/icons/icons.svg#pioner-logo") bottom -4rem right 3rem/78% no-repeat,
+      url("../img/icons/icons.svg#anyPact-logotip") bottom -4rem right 10rem/67%
+        no-repeat;
   }
 
   & p {
@@ -225,34 +220,34 @@ td {
 }
 
 .small__banner-about {
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     grid-template-rows: 1fr 116px;
   }
 
   & .small__banner-left-text {
-    grid-column: 1/ span 9;
+    grid-column: 1 / span 9;
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       // padding: 0;
-      grid-column: 1/ span 12;
+      grid-column: 1 / span 12;
     }
   }
 
   & .small__banner-right-img {
-    grid-column: 10/ span 3;
+    grid-column: 10 / span 3;
     justify-content: flex-end;
     padding-top: 18px;
     padding-right: 0;
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       padding: 0;
-      grid-column: 8/ span 6;
+      grid-column: 8 / span 6;
     }
   }
 }
 
 .swiper {
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 0 23px;
     // overflow: visible;
   }
@@ -263,7 +258,7 @@ td {
 }
 
 .swiper .grid-container {
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     display: flex;
     column-gap: 0;
   }
@@ -273,7 +268,7 @@ td {
 .swiper-button-next {
   display: none;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     display: flex;
     width: 36px;
     height: 36px;
@@ -310,7 +305,7 @@ td {
   margin: 0 auto;
   // margin-bottom: 36px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 
@@ -318,10 +313,10 @@ td {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    grid-column: 1/ span 6;
+    grid-column: 1 / span 6;
 
-    @media(max-width: 768px) {
-      grid-row: 1/span 1;
+    @media (max-width: 768px) {
+      grid-row: 1 / span 1;
       align-items: center;
       grid-column: span 12;
     }
@@ -338,15 +333,15 @@ td {
   }
 
   & .small__banner-right-text {
-    grid-column: 7/ span 6;
+    grid-column: 7 / span 6;
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 15px;
 
-    @media(max-width: 768px) {
-      grid-row: 2/span 1;
+    @media (max-width: 768px) {
+      grid-row: 2 / span 1;
       grid-column: span 12;
     }
   }
@@ -357,28 +352,27 @@ td {
   margin: 0 auto;
   width: 11px;
   height: 38px;
-
 }
 
 .child__banner {
   padding: 36px 24px;
   row-gap: 24px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 24px 12px;
     grid-template-rows: 1fr;
   }
 
   // width: 33%;
   & .small__banner-left-img {
-    grid-column: 1/ span 12;
+    grid-column: 1 / span 12;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
 
-    @media(max-width: 768px) {
-      grid-row: 1/span 1;
+    @media (max-width: 768px) {
+      grid-row: 1 / span 1;
       align-items: center;
     }
 
@@ -391,7 +385,7 @@ td {
       width: 313px;
       height: 82px;
 
-      @media(max-width: 768px) {
+      @media (max-width: 768px) {
         width: 220px;
         height: 62px;
       }
@@ -399,11 +393,11 @@ td {
   }
 
   & .small__banner-right-text {
-    grid-column: 1/ span 12;
+    grid-column: 1 / span 12;
     padding: 0;
 
-    @media(max-width: 768px) {
-      grid-row: 2/span 1;
+    @media (max-width: 768px) {
+      grid-row: 2 / span 1;
     }
 
     & .nfk-dot-list {
@@ -420,11 +414,11 @@ td {
   row-gap: 32px;
 
   &-description {
-    grid-column: 1/ span 9;
+    grid-column: 1 / span 9;
     font-size: 20px;
     line-height: 28px;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       grid-column: span 12;
     }
   }
@@ -433,7 +427,7 @@ td {
     grid-column: span 6;
     padding: 32px 24px;
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       grid-column: span 12;
       grid-template-rows: 1fr;
     }
@@ -447,12 +441,12 @@ td {
 
 .important__history {
   margin-bottom: 209px;
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     margin-bottom: 96px;
   }
   & h2 {
     margin-bottom: 96px;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       margin-bottom: 48px;
     }
   }
@@ -468,21 +462,21 @@ td {
   align-items: center;
   justify-content: center;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     max-width: 4px;
     height: 554px;
     flex-direction: column;
     margin-left: 19px;
   }
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     background-color: var(--primary-grey);
     border-radius: 100%;
     width: 12px;
     height: 12px;
     left: 0;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       top: 0;
       left: -4px;
     }
@@ -498,7 +492,7 @@ td {
     border-right: 4px solid var(--primary-grey);
     right: -2px;
     transform: rotate(45deg);
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       bottom: 0;
       transform: rotate(135deg);
       right: -10px;
@@ -516,7 +510,7 @@ td {
       position: absolute;
       top: -40px;
       left: -44px;
-      @media(max-width: 768px)  {
+      @media (max-width: 768px) {
         top: -29px;
         left: 50px;
         margin: 0;
@@ -533,11 +527,11 @@ td {
       padding: 24px 16px;
       width: 313px;
 
-      @media(max-width: 1176px) {
+      @media (max-width: 1176px) {
         width: 200px;
         left: -85px;
       }
-      @media(max-width: 768px)  {
+      @media (max-width: 768px) {
         top: 34px;
         left: 50px;
         width: 260px;
@@ -548,14 +542,13 @@ td {
 
   & .progress-step:nth-child(2) {
     margin: 0 30%;
-    @media(max-width: 768px)  {
+    @media (max-width: 768px) {
       margin: 10rem 0;
     }
   }
 }
 
 .management {
-
   & h2 {
     margin-bottom: 48px;
   }
@@ -564,7 +557,7 @@ td {
     display: flex;
     align-items: center;
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -582,15 +575,15 @@ td {
 .composition-of-shareholders {
   &-header {
     padding: 16px 0 16px 48px;
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       padding: 16px 0 16px 16px;
     }
     & span:not(:last-child) {
       margin-right: 26%;
-      @media(max-width: 1176px) {
+      @media (max-width: 1176px) {
         margin-right: 17%;
       }
-      @media(max-width: 768px) {
+      @media (max-width: 768px) {
         margin-right: 11%;
       }
     }
@@ -598,14 +591,14 @@ td {
 
   & .small__banner {
     padding: 36px 0 36px 48px;
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       padding: 24px 0 86px 16px;
       grid-template-rows: 1fr;
     }
     & .small__banner-left-text {
       padding: 0;
       grid-column: 1 / span 3;
-      @media(max-width: 585px) {
+      @media (max-width: 585px) {
         grid-column: 1 / span 6;
       }
     }
@@ -615,8 +608,8 @@ td {
       align-items: center;
       grid-column: 6 / span 3;
       justify-content: flex-start;
-      @media(max-width: 585px) {
-        grid-row: 1/ span 1;
+      @media (max-width: 585px) {
+        grid-row: 1 / span 1;
         grid-column: 7 / span 6;
         align-items: flex-start;
         justify-content: center;
@@ -628,7 +621,7 @@ td {
         font-weight: 600;
         font-size: 64px;
         line-height: 22px;
-        @media(max-width: 585px)  {
+        @media (max-width: 585px) {
           font-size: 48px;
         }
       }
@@ -640,33 +633,33 @@ td {
   }
 
   & .pioner__banner {
-    background-image: url('../img/icons/icons.svg#pioner-logo');
+    background-image: url("../img/icons/icons.svg#pioner-logo");
     background-repeat: no-repeat;
     background-position: right -2rem bottom -2rem;
     background-size: 12%;
-    @media(max-width: 1176px) {
+    @media (max-width: 1176px) {
       background-size: 18%;
     }
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       background-size: 22%;
     }
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       background-size: 38%;
     }
   }
 
   & .nfk__banner {
-    background-image: url('../img/icons/icons.svg#nfk-logo');
+    background-image: url("../img/icons/icons.svg#nfk-logo");
     background-repeat: no-repeat;
     background-position: right -2rem bottom -2rem;
     background-size: 12%;
-    @media(max-width: 1176px) {
+    @media (max-width: 1176px) {
       background-size: 18%;
     }
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       background-size: 22%;
     }
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       background-size: 38%;
     }
   }
@@ -675,22 +668,22 @@ td {
 .person {
   .small__banner {
     grid-column: span 6;
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       grid-column: span 12;
       grid-template-rows: 100px 1fr;
     }
 
     & .small__banner-left-img {
-      grid-column: 1/ span 6;
-      @media(max-width: 768px) {
+      grid-column: 1 / span 6;
+      @media (max-width: 768px) {
         grid-column: span 12;
         justify-self: flex-end;
       }
     }
 
     & .small__banner-right-text {
-      grid-column: 7/ span 6;
-      @media(max-width: 768px) {
+      grid-column: 7 / span 6;
+      @media (max-width: 768px) {
         grid-column: span 8;
       }
     }
@@ -705,15 +698,14 @@ td {
   display: contents;
 }
 
-
 .block__margin-bottom {
   margin-bottom: 72px;
 
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     margin-bottom: 56px;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     margin-bottom: 48px;
   }
 }
@@ -721,16 +713,14 @@ td {
 .mb-48 {
   margin-bottom: 48px;
 
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     margin-bottom: 36px;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     margin-bottom: 24px;
   }
 }
-
-
 
 input::placeholder {
   color: var(--secondary-text);
@@ -755,7 +745,7 @@ input::placeholder {
   font-size: 16px;
   line-height: 22px;
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     font-size: 14px;
     line-height: 19px;
   }
@@ -778,15 +768,12 @@ input::placeholder {
   text-align: center;
 }
 
-
-
-
 //======левуый аппостроф
 
 .text-indent {
   text-indent: 10px;
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     text-indent: 8px;
   }
 }
@@ -795,7 +782,7 @@ sup {
   vertical-align: super;
   font-size: 8px;
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     font-size: 7px;
   }
 }
@@ -804,17 +791,16 @@ sup {
 .important__block {
   display: flex;
   align-items: center;
-  background-color: #E8F1FE;
+  background-color: #e8f1fe;
   border-radius: 5px;
   border-left: 5px solid var(--primary-blue);
   padding: 26px 166px 26px 35px;
 
-
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     padding: 26px 118px 26px 35px;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     padding: 16px 12px 16px 8px;
   }
 
@@ -822,7 +808,7 @@ sup {
     font-size: 14px;
     line-height: 19px;
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       font-size: 12px;
       line-height: 16px;
     }
@@ -834,12 +820,12 @@ sup {
   height: 46px;
   margin-right: 28px;
 
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     width: 46px;
     height: 46px;
   }
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     width: 32px;
     height: 32px;
     margin-right: 12px;
@@ -852,7 +838,7 @@ sup {
   position: relative;
   transition: var(--animation-transition);
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     font-size: 12px;
     line-height: 16px;
   }
@@ -881,9 +867,34 @@ sup {
 //========Ссылка на файл
 .electronic__files-item {
   grid-column: span 4;
+  // display: flex;
+  // align-items: center;
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     grid-column: span 12;
+  }
+}
+
+.documents__links {
+  & img {
+    transition: all 0.2s ease-in-out 0s;
+    max-width: 75%;
+    @media (max-width: 585px) {
+      max-width: 100%;
+    }
+  }
+  & .grid-container {
+    @media (max-width: 585px) {
+      row-gap: 48px;
+    }
+  }
+  & li {
+    display: flex;
+    align-items: center;
+  }
+
+  & li:hover img {
+    transform: scale(1.2);
   }
 }
 
@@ -907,17 +918,16 @@ sup {
   top: 15px;
   left: 7px;
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     left: 22px;
     top: 18px;
   }
-
 }
 
 .svg-file-download-dims {
   color: var(--primary-green);
 
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     width: 78px;
   }
 }
@@ -949,29 +959,25 @@ sup {
   & span:not(:last-child) {
     margin-right: 12px;
   }
-
 }
 
-
 //========
-.pioner__lising-page {}
+.pioner__lising-page {
+}
 
 .nav-pills {
   justify-content: center;
 
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     justify-content: center;
-
   }
-
 }
 
 .nav-item {
   grid-column: span 3;
 
-  @media(max-width: 1176px) {
+  @media (max-width: 1176px) {
     grid-column: span 6;
-
   }
 
   // @media(max-width: 585px) {
@@ -981,10 +987,9 @@ sup {
   & button {
     width: 283px;
 
-    @media(max-width: 1176px) {
+    @media (max-width: 1176px) {
       width: 100%;
     }
-
   }
 }
 .tab-pane {
@@ -1001,11 +1006,10 @@ sup {
   color: var(--primary-text);
   padding: 16px 24px;
   min-height: 74px;
-  @media(max-width: 585px)  {
+  @media (max-width: 585px) {
     font-size: 12px;
   }
 }
-
 
 .nav-pills .nav-link.active {
   background-color: var(--primary-text);
@@ -1022,42 +1026,46 @@ sup {
 }
 
 .others-page__banner {
-  @media(max-width: 585px) {
+  @media (max-width: 585px) {
     grid-template-rows: 1fr 129px;
   }
 
   & .small__banner-left-text {
-    grid-column: 1/ span 8;
+    grid-column: 1 / span 8;
 
-    @media(max-width: 585px) {
-      grid-column: 1/ span 12;
+    @media (max-width: 585px) {
+      grid-column: 1 / span 12;
     }
   }
 
   & .small__banner-right-img {
-    grid-column: 9/ span 4;
+    grid-column: 9 / span 4;
     padding: 0;
-    background:
-      url('../img/icons/icons.svg#pioner-logo') bottom -2rem right -4rem/54% no-repeat,
-      url('../img/icons/icons.svg#nfk-logo') bottom -1rem right 4rem /49% no-repeat;
+    background: url("../img/icons/icons.svg#pioner-logo") bottom -2rem right -4rem/54%
+        no-repeat,
+      url("../img/icons/icons.svg#nfk-logo") bottom -1rem right 4rem /49%
+        no-repeat;
 
-    @media(max-width: 1176px) {
-      background:
-        url('../img/icons/icons.svg#pioner-logo') bottom -2rem right -4rem/74% no-repeat,
-        url('../img/icons/icons.svg#nfk-logo') bottom -1rem right 50px /67% no-repeat;
+    @media (max-width: 1176px) {
+      background: url("../img/icons/icons.svg#pioner-logo") bottom -2rem right -4rem/74%
+          no-repeat,
+        url("../img/icons/icons.svg#nfk-logo") bottom -1rem right 50px /67%
+          no-repeat;
     }
 
-    @media(max-width: 850px) {
-      background:
-        url('../img/icons/icons.svg#pioner-logo') bottom -2rem right -4rem/87% no-repeat,
-        url('../img/icons/icons.svg#nfk-logo') bottom -1rem right 50px /77% no-repeat;
+    @media (max-width: 850px) {
+      background: url("../img/icons/icons.svg#pioner-logo") bottom -2rem right -4rem/87%
+          no-repeat,
+        url("../img/icons/icons.svg#nfk-logo") bottom -1rem right 50px /77%
+          no-repeat;
     }
 
-    @media(max-width: 585px) {
-      grid-column: 1/ span 12;
-      background:
-        url('../img/icons/icons.svg#pioner-logo') bottom -2rem right -4rem/57% no-repeat,
-        url('../img/icons/icons.svg#nfk-logo') bottom -1rem right 30px /47% no-repeat;
+    @media (max-width: 585px) {
+      grid-column: 1 / span 12;
+      background: url("../img/icons/icons.svg#pioner-logo") bottom -2rem right -4rem/57%
+          no-repeat,
+        url("../img/icons/icons.svg#nfk-logo") bottom -1rem right 30px /47%
+          no-repeat;
     }
   }
 }
@@ -1067,11 +1075,11 @@ sup {
     padding: 32px 24px;
     grid-column: span 4;
 
-    @media(max-width: 850px) {
+    @media (max-width: 850px) {
       grid-column: span 12;
     }
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       grid-template-rows: 1fr;
     }
 
@@ -1088,10 +1096,9 @@ sup {
 
 .contacts {
   &__section {
-
     padding-bottom: 112px;
 
-    @media(max-width: 1176px) {
+    @media (max-width: 1176px) {
       padding-bottom: 0;
     }
   }
@@ -1110,7 +1117,7 @@ sup {
     margin-bottom: var(--mb-40);
     margin-top: 32px;
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       margin-top: 24px;
       height: 424px;
     }
@@ -1122,15 +1129,13 @@ sup {
     justify-content: space-between;
     max-width: 60%;
 
-    @media(max-width: 850px) {
+    @media (max-width: 850px) {
       max-width: 100%;
     }
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       flex-direction: column;
     }
-
-
   }
 
   &__company-wrapper-el:not(:last-child) {
@@ -1143,11 +1148,11 @@ sup {
     flex-direction: column;
     flex-wrap: wrap;
 
-    @media(max-width: 1176px) {
+    @media (max-width: 1176px) {
       margin: 0;
     }
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       margin-bottom: 24px;
     }
   }
@@ -1155,11 +1160,11 @@ sup {
   &__company-schedule {
     margin-right: 138px;
 
-    @media(max-width: 1176px) {
+    @media (max-width: 1176px) {
       margin: 0;
     }
 
-    @media(max-width: 585px) {
+    @media (max-width: 585px) {
       margin-bottom: 24px;
     }
   }
@@ -1170,10 +1175,10 @@ sup {
 }
 
 .cheb-marker {
-  color: #DD270F;
+  color: #dd270f;
   position: absolute;
   left: 48%;
-  top: 46%
+  top: 46%;
 }
 
 .company__requisites {
