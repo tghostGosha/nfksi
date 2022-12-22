@@ -263,6 +263,10 @@ input::placeholder {
   }
 
 }
+.header__nav-item_active {
+  font-weight: bold;
+  color: var(--primary-green);
+}
 
 //======dropdown
 
@@ -368,7 +372,7 @@ input::placeholder {
   position: absolute;
   right: -1500px;
   top: 69px;
-  padding: 24px 16px;
+  padding: 24px 24px;
   border-radius: 0px 0px 0px 8px;
   box-shadow: 0px 4px 16px rgba(29, 37, 44, 0.16);
   transition: right 0.3s ease-in-out 0s;

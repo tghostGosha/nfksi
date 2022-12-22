@@ -44,7 +44,7 @@
   display: inline-block;
   color: var(--primary-text);
   background-color: inherit;
-
+  transition: all 0.3s ease-in-out 0s;
   @media(max-width: 585px) {
     font-size: 14px;
     line-height: 19px;
@@ -63,6 +63,7 @@
 .text-link:hover .text-link-svg .text-link:focus,
 .text-link:focus .text-link-svg {
   color: var(--primary-green);
+  font-weight: bold;
 }
 
 

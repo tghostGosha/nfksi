@@ -214,8 +214,11 @@ td {
   }
 
   & p {
-    font-size: 24px;
+    font-size: 30px;
     line-height: 22px;
+  }
+  & h1 {
+    margin: 32px 0;
   }
 }
 
@@ -298,7 +301,34 @@ td {
 .slide {
   grid-column: span 4;
 }
+.parent__banner-vertical-line {
 
+  & .vertical-line::after,
+  & .vertical-line::before {
+    content: '';
+    background-color: var(--primary-grey);
+    margin: 0 auto;
+    width: 11px;
+    height: 38px;
+    position: absolute;
+    @media(max-width: 768px) {
+      display: none;
+    }
+  }
+
+  & .vertical-line::after {
+    right: -22rem;
+    @media(max-width: 1176px) {
+      right: -13rem;
+    }
+  }
+  & .vertical-line::before {
+    left: -22rem;
+    @media(max-width: 1176px) {
+      left: -13rem;
+    }
+  }
+}
 .parent__banner {
   padding: 32px 42px;
   width: 70%;
@@ -308,7 +338,7 @@ td {
   @media (max-width: 768px) {
     width: 100%;
   }
-
+ 
   & .small__banner-left-img {
     flex-direction: column;
     justify-content: space-between;
@@ -352,6 +382,10 @@ td {
   margin: 0 auto;
   width: 11px;
   height: 38px;
+<<<<<<< HEAD
+=======
+  position: relative;
+>>>>>>> 6e803220de6d65fbdf489eeadbe99f5037a000de
 }
 
 .child__banner {
@@ -383,7 +417,7 @@ td {
 
     & img {
       width: 313px;
-      height: 82px;
+      height: 90px;
 
       @media (max-width: 768px) {
         width: 220px;
@@ -414,7 +448,11 @@ td {
   row-gap: 32px;
 
   &-description {
+<<<<<<< HEAD
     grid-column: 1 / span 9;
+=======
+    grid-column: 1/ span 12;
+>>>>>>> 6e803220de6d65fbdf489eeadbe99f5037a000de
     font-size: 20px;
     line-height: 28px;
 
