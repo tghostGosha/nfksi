@@ -154,7 +154,7 @@ input::placeholder {
     transform: scale(0);
   }
 
-  @media(max-width: 850px) {
+  @media(max-width: 1176px) {
     display: block;
     position: relative;
     width: 24px;
@@ -204,6 +204,7 @@ input::placeholder {
   @media(max-width: 1176px) {
     grid-column: 4/ span 9;
     justify-content: flex-end;
+    display: none;
   }
 
   @media(max-width: 850px) {
@@ -406,7 +407,7 @@ input::placeholder {
   }
 
   & .dropdown-menu {
-    @media(max-width: 850px) {
+    @media(max-width: 1176px) {
       display: flex;
       border: 0;
       padding: 24px 0 0 48px;

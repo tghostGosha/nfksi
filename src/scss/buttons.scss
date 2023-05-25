@@ -18,6 +18,24 @@
   background-color: var(--secondary-green);
   color: var(--white);
 }
+.button-with-border {
+  color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+  border-radius: 5px;
+  padding: 14px 32px;
+  background-color: var(--white);
+  @media(max-width: 585px) {
+    font-size: 14px;
+    line-height: 19px;
+    padding: 12px 8px;
+  }
+}
+
+.button-with-border:hover,
+.button-with-border:focus {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
 
 .grey-button {
   display: inline-block;
