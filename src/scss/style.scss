@@ -184,163 +184,73 @@ td {
 }
 
 .hero__container {
-  padding: 143px 15px 255px 15px;
-  background: url("../img/nfk-logo.png") bottom -4rem right / 29% no-repeat,
-    url("../img/icons/icons.svg#pioner-logo") bottom -4rem right 11rem/32% no-repeat,
-    url("../img/icons/icons.svg#anyPact-logotip") bottom -4rem right 25rem/27% no-repeat;
+  padding: 88px 20px 167px 20px;
+  position: relative;
 
   @media (max-width: 1176px) {
-    padding: 73px 15px 205px 15px;
-    background: url("../img/nfk-logo.png") bottom -4rem right / 29% no-repeat,
-      url("../img/icons/icons.svg#pioner-logo") bottom -4rem right 8rem/32% no-repeat,
-      url("../img/icons/icons.svg#anyPact-logotip") bottom -4rem right 17rem/27%
-        no-repeat;
+    padding: 88px 15px 349px 15px;
   }
-
+  @media (max-width: 810px) {
+    padding: 70px 15px 275px 15px;
+  }
   @media (max-width: 768px) {
-    padding: 73px 15px 205px 15px;
-    background: url("../img/nfk-logo.png") bottom -4rem right / 32% no-repeat,
-      url("../img/icons/icons.svg#pioner-logo") bottom -4rem right 8rem/37% no-repeat,
-      url("../img/icons/icons.svg#anyPact-logotip") bottom -4rem right 17rem/34%
-        no-repeat;
+    padding: 70px 15px 295px 15px;
   }
 
   @media (max-width: 585px) {
-    padding: 73px 15px 205px 15px;
-    background: url("../img/nfk-logo.png") bottom -4rem right -3rem /69% no-repeat,
-      url("../img/icons/icons.svg#pioner-logo") bottom -4rem right 3rem/78% no-repeat,
-      url("../img/icons/icons.svg#anyPact-logotip") bottom -4rem right 10rem/67%
-        no-repeat;
+    padding: 48px 15px 272px 15px;
   }
 
   & p {
-    font-size: 30px;
-    line-height: 22px;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 400;
+    @media (max-width: 1176px) {
+      font-size: 32px;
+      line-height: 43px;
+    }
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  & span {
+    font-size: 24px;
+    line-height: 32px;
+    display: inline-block;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 27px;
+    }
   }
   & h1 {
-    margin: 32px 0;
+    margin: 8px 0 18px 0;
+    @media (max-width: 1176px) {
+      margin: 8px 0 12px 0;
+    }
   }
 }
 .investor__container {
-  padding: 89px 15px 15px 15px;
-  background: url("../img/investor-logo.png") bottom 0rem right -8rem/64% no-repeat;
+  padding: 88px 15px 16px 15px;
   display: flex;
   flex-wrap: wrap;
   @media (max-width: 1176px) {
-    background: url("../img/investor-logo.png") bottom 0rem right -5rem/64% no-repeat;
+    padding: 88px 15px 15px 15px;
   }
-  @media (max-width: 810px) {
-    background: url("../img/investor-logo.png") bottom -17rem right -3rem/100%
-      no-repeat;
-    padding: 54px 12px 15px 12px;
-  }
-  @media (max-width: 585px) {
-    background: url("../img/investor-logo.png") bottom -8rem right -6rem/120%
-      no-repeat;
-  }
-  &-left {
-    flex: 0 0 60%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 32px;
-    margin-bottom: 32px;
-    @media (max-width: 1176px) {
-      flex: 1 1 65%;
-    }
-    @media (max-width: 810px) {
-      flex: 1 1 100%;
-      row-gap: 16px;
-    }
-  }
-  &-right {
-    flex: 0 0 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @media (max-width: 1176px) {
-      flex: 0 0 35%;
-    }
-    @media (max-width: 810px) {
-      flex: 1 1 50%;
-      align-items: flex-end;
-    }
-    & p {
-      font-weight: 700;
-      font-size: 164px;
-      line-height: 161px;
 
-      @media (max-width: 1176px) {
-        padding: 0;
-        font-size: 124px;
-        line-height: 141px;
-      }
-      @media (max-width: 810px) {
-        font-size: 104px;
-        line-height: 101px;
-      }
-    }
-    & span {
-      display: inline-block;
-      font-size: 34px;
-      line-height: 28px;
-      font-weight: 400;
-      @media (max-width: 1176px) {
-        padding: 0;
-        font-size: 26px;
-      }
-      @media (max-width: 810px) {
-        font-size: 24px;
-      }
-    }
+  @media (max-width: 810px) {
+    padding: 70px 12px 15px 12px;
+  }
+  @media (max-width: 585px) { 
+    padding: 48px 12px 12px 12px;
   }
   & h1 {
-    margin: 0;
-    font-size: 52px;
-    line-height: 62px;
-    white-space: wrap;
-    float: left;
-    display: block;
-    @media (max-width: 1176px) {
-      font-size: 42px;
-      line-height: 56px;
-    }
     @media (max-width: 810px) {
-      font-size: 32px;
-      line-height: 38px;
+      padding-right: 15%;
     }
   }
-  & .bank__descr {
-    flex: 1 1 100%;
-    display: flex;
-    column-gap: 25px;
-    align-items: center;
-    margin-bottom: 19px;
-    @media (max-width: 810px) {
-      flex-direction: column-reverse;
-      align-items: flex-start;
-      row-gap: 7px;
-    }
-    & p {
-      font-weight: 300;
-      font-size: 20px;
-      line-height: 46px;
-      @media (max-width: 1176px) {
-        padding: 0;
-        font-size: 18px;
-      }
-      @media (max-width: 810px) {
-        font-size: 16px;
-        line-height: 18px;
-      }
-    }
-  }
-  & .buttons__block {
-    justify-content: flex-start;
-    & button {
-      width: 100%;
-      max-width: 188px;
-    }
-  }
+  
+
   & .svg-bank-logo-dims {
     width: 183px;
     height: 46px;
@@ -394,7 +304,14 @@ td {
     column-gap: 0;
   }
 }
-
+.swiper-pagination {
+  @media (max-width: 585px) {
+    display: none;
+  }
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-text);
+}
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
@@ -425,7 +342,10 @@ td {
   font-size: 16px;
   color: var(--primary-text);
 }
-
+.swiper-slide {
+  overflow: hidden;
+  height: auto;
+}
 .slide {
   grid-column: span 4;
 }

@@ -9,20 +9,78 @@
   @@include('html/header.html',{})
   <main>
     <section class="big__banner">
-      <div class="container hero__container">
-        <p>Акционерное общество</p>
-        <h1>НФК - Структурные инвестиции</h1>
-        <p>
-          Всегда в деле
-        </p>
+      <div class="big__banner-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="big__banner-background hero" style="--desktop-image-banner: url('../img/nfksi-banner.png');">
+              <div class="container hero__container big__banner-container">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <span>Акционерное общество</span>
+                <h1>НФК - Структурные инвестиции</h1>
+                <p>
+                  Всегда в деле
+                </p>
+                <ul class="nfk-dot-list">
+                  <li class="nfk-dot-list-item">Финансирование группы «Пионер-Лизинг»</li>
+                  <li class="nfk-dot-list-item">Секьюритизация активов</li>
+                  <li class="nfk-dot-list-item">Оказание услуг лизинга</li>
+                  <li class="nfk-dot-list-item">Финтех-проекты</li>
+                </ul>
+               
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="big__banner-background investor"
+              style="--desktop-image-banner: url('../img/investor-logo.png');">
+              <div class="container investor__container big__banner-container">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="big__banner-container-left">
+                  <h1>Дебютный выпуск облигаций АО&nbsp;«НФК&#8288;&#8211;&#8288;СИ»</h1>
+                  <ul class="nfk-dot-list">
+                    <li class="nfk-dot-list-item">Ежемесячные выплаты дохода</li>
+                    <li class="nfk-dot-list-item">Мгновенная покупка</li>
+                    <li class="nfk-dot-list-item">Отсутствие комиссий</li>
+                  </ul>
+                  <div class="buttons__block ">
+                    <a target="_blank"
+                      href="https://pos.vtbreg.ru/marketplace/marketplace2/market/detail?emitentId=2c90888a-882afb73-0188-2d6843d9-0fa4&regNum=4-01-10707-P-001P"
+                      class="primary-button">Купить</a>
+                    <a target="_blank" href="/upload/static/presentation.pdf" class="button-with-border">Презентация</a>
+                  </div>
+                </div>
+                <div class="big__banner-container-right">
+                  <p>15%</p>
+                  <span class="secondary-text">годовых *</span>
+                </div>
+                <div class="big__banner-container-bottom">
+                  <img src="./img/icons/icons.svg#bank-logo" class="svg-bank-logo-dims" alt="bank-logo" />
+                  <p class="secondary-text">Выпуск зарегистрирован в Банке России </p>
+                  <span class="secondary-text">* Ставка с 1-го по 12-й купонный период</ы>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
       </div>
+
     </section>
     <section class="section-padding">
       <div class="container">
         <div class="small__banner block__margin-bottom small__banner-about">
           <div class="small__banner-left-text">
             <h2>О компании</h2>
-            <p>Акционерное общество «НФК – Структурные инвестиции» (АО «НФК-СИ») является дочерним обществом ООО&nbsp;«Пионер-Лизинг» и играет важную роль в привлечении финансирования в группу компаний с целью развития лизинговой деятельности, а также в области реализации интернет-проектов.</p>
+            <p>Акционерное общество «НФК – Структурные инвестиции» (АО «НФК-СИ») является дочерним обществом
+              ООО&nbsp;«Пионер-Лизинг» и играет важную роль в привлечении финансирования в группу компаний с целью
+              развития лизинговой деятельности, а также в области реализации интернет-проектов.</p>
           </div>
           <div class="small__banner-right-img ">
             <img src="../img/nfksi-logo.png" class="" alt="nfkSi-big-logo" />
@@ -47,7 +105,7 @@
         </div>
         <div class="parent__banner-vertical-line">
           <div class="vertical-line"></div>
-        
+
         </div>
         <div class="swiper block__margin-bottom">
           <div class="grid-container swiper-wrapper">
@@ -114,7 +172,7 @@
               <div class="small__banner child__banner">
                 <div class="small__banner-left-img">
                   <h3>Финансирование лизинговых проектов</h3>
-                
+
                 </div>
               </div>
               <div class="vertical-line"></div>
@@ -243,7 +301,7 @@
               <div class="small__banner-right-text">
                 <h3>Архипов
                   Николай Алексеевич</h3>
-                  <p>Директор ООО "Пионер-Лизинг"</p>
+                <p>Директор ООО "Пионер-Лизинг"</p>
               </div>
             </div>
             <div class="small__banner">
@@ -253,7 +311,7 @@
               <div class="small__banner-right-text">
                 <h3>Кузьмин
                   Алексей Валериевич</h3>
-                  <p>Директор по развитию и стратегическому планированию АО "НФК-Сбережения"</p>
+                <p>Директор по развитию и стратегическому планированию АО "НФК-Сбережения"</p>
               </div>
             </div>
           </div>
@@ -269,7 +327,7 @@
               <div class="small__banner-right-text">
                 <h3>Наумов
                   Евгений Леонидович</h3>
-                  <p>Учредитель ООО "Пионер-Лизинг"</p>
+                <p>Учредитель ООО "Пионер-Лизинг"</p>
               </div>
             </div>
           </div>

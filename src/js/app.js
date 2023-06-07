@@ -4,6 +4,7 @@ import {
   Inputmask
 } from "inputmask";
 import Swiper, {
+  Autoplay,
   Navigation,
   Pagination
 } from 'swiper';
@@ -94,7 +95,29 @@ window.addEventListener('scroll', () => {
 
   lastScroll = scrollPosition()
 })
+const heroSwiper = new Swiper('.big__banner-swiper', {
+  modules: [Pagination, Autoplay, Navigation],
+  loop: true,
+  spaceBetween: 50,
+  freeMode: true,
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: false,
+  
+  },
+  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
 
+  
+});
 
 //===========swiper ======
 

@@ -6,29 +6,32 @@
     @@include('html/header.html',{})
     <main>
       <section class="big__banner">
-        <div class="container investor__container">
-          <div class="investor__container-left">
+        <div class="big__banner-background investor" style="--desktop-image-banner: url('../img/investor-logo.png');">
 
-            <h1>Дебютный выпуск облигаций АО&nbsp;«НФК&#8288;&#8211;&#8288;СИ»</h1>
-            <ul class="nfk-dot-list">
-              <li class="nfk-dot-list-item">Ежемесячные выплаты дохода</li>
-              <li class="nfk-dot-list-item">Мгновенная покупка</li>
-              <li class="nfk-dot-list-item">Отсутствие комиссий</li>
-            </ul>
-            <div class="buttons__block ">
-              <button type="button" class="primary-button">Купить</button>
-              <button type="button" class="button-with-border">Презентация</button>
+          <div class="container investor__container big__banner-container">
+            <div class="big__banner-container-left">
+   
+              <h1>Дебютный выпуск облигаций АО&nbsp;«НФК&#8288;&#8211;&#8288;СИ»</h1>
+              <ul class="nfk-dot-list">
+                <li class="nfk-dot-list-item">Ежемесячные выплаты дохода</li>
+                <li class="nfk-dot-list-item">Мгновенная покупка</li>
+                <li class="nfk-dot-list-item">Отсутствие комиссий</li>
+              </ul>
+              <div class="buttons__block ">
+                <a target="_blank" href="https://pos.vtbreg.ru/marketplace/marketplace2/market/detail?emitentId=2c90888a-882afb73-0188-2d6843d9-0fa4&regNum=4-01-10707-P-001P" class="primary-button">Купить</a>
+                <a target="_blank" href="/upload/static/presentation.pdf" class="button-with-border">Презентация</a>
+              </div>
+            </div>
+            <div class="big__banner-container-right">
+              <p>15%</p>
+              <span class="secondary-text">годовых *</span>
+            </div>
+            <div class="big__banner-container-bottom">
+              <img src="./img/icons/icons.svg#bank-logo" class="svg-bank-logo-dims" alt="bank-logo" />
+              <p class="secondary-text">Выпуск зарегистрирован в Банке России </p>
+              <span class="secondary-text">* Ставка с 1-го по 12-й купонный период</span>
             </div>
           </div>
-          <div class="investor__container-right">
-            <p>15%</p>
-            <span class="secondary-text">годовых *</span>
-          </div>
-          <div class="bank__descr">
-            <img src="./img/icons/icons.svg#bank-logo" class="svg-bank-logo-dims" alt="bank-logo" />
-            <p class="secondary-text">Выпуск зарегистрирован в Банке России </p>
-          </div>
-          <p class="secondary-text">* Ставка с 1-го по 12-й купонный период</p>
         </div>
       </section>
       <section class="section-padding">
