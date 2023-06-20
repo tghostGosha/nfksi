@@ -119,6 +119,24 @@ const heroSwiper = new Swiper('.big__banner-swiper', {
   
 });
 
+const hostorySwiper = new Swiper('.swiper__history', {
+  modules: [Pagination, Autoplay, Navigation],
+  loop: true,
+  spaceBetween: 50,
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  freeMode: true,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    enabled: true,
+  
+  },
+  speed: 10000,
+  shortSwipes: false,
+
+});
+
 //===========swiper ======
 
 let swiper = Swiper;

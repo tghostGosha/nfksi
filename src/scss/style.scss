@@ -241,7 +241,7 @@ td {
   @media (max-width: 810px) {
     padding: 70px 12px 15px 12px;
   }
-  @media (max-width: 585px) { 
+  @media (max-width: 585px) {
     padding: 48px 12px 12px 12px;
   }
   & h1 {
@@ -249,7 +249,6 @@ td {
       padding-right: 15%;
     }
   }
-  
 
   & .svg-bank-logo-dims {
     width: 183px;
@@ -520,92 +519,53 @@ td {
 }
 
 .important__history {
-  margin-bottom: 209px;
+  margin-bottom: 92px;
   @media (max-width: 768px) {
     margin-bottom: 96px;
   }
   & h2 {
-    margin-bottom: 96px;
+    margin-bottom: 48px;
     @media (max-width: 768px) {
       margin-bottom: 48px;
     }
   }
 }
-
-.progress__bar {
-  width: 100%;
-  max-width: 1170px;
-  height: 4px;
-  background-color: var(--primary-grey);
+.swiper__history {
+  overflow: hidden;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1;
 
-  @media (max-width: 768px) {
-    max-width: 4px;
-    height: 554px;
-    flex-direction: column;
-    margin-left: 19px;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: var(--primary-grey);
-    border-radius: 100%;
-    width: 12px;
-    height: 12px;
-    left: 0;
-    @media (max-width: 768px) {
-      top: 0;
-      left: -4px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    border-top: 4px solid var(--primary-grey);
-    border-right: 4px solid var(--primary-grey);
-    right: -2px;
-    transform: rotate(45deg);
-    @media (max-width: 768px) {
-      bottom: 0;
-      transform: rotate(135deg);
-      right: -10px;
-    }
-  }
-
-  & .progress-step {
+  & .swiper-wrapper {
     position: relative;
-    width: 19px;
-    height: 19px;
-    background-color: var(--primary-text);
-    border-radius: 100%;
-
-    & .date {
-      position: absolute;
-      top: -40px;
-      left: -44px;
-      @media (max-width: 768px) {
-        top: -29px;
-        left: 50px;
-        margin: 0;
-      }
+    transition-timing-function: linear;
+  }
+  & .swiper-slide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 16px;
+    z-index: 3;
+    position: relative;
+    background-color: inherit;
+    & h3 {
+      margin: 0;
     }
-
+    & .progress-step {
+      position: relative;
+      width: 19px;
+      height: 19px;
+      z-index: 3;
+      background-color: var(--primary-text);
+      border-radius: 100%;
+      display: block;
+    }
     & .date-description {
-      position: absolute;
-      bottom: -120px;
-      left: -130px;
       display: inline-block;
       border-radius: 10px;
       background-color: var(--primary-grey);
       padding: 24px 16px;
-      width: 313px;
+      width: 100%;
+      max-width: 313px;
 
       @media (max-width: 1176px) {
         width: 200px;
@@ -619,12 +579,71 @@ td {
       }
     }
   }
+  & .progress__bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-grey);
+    z-index: 1;
+    position: relative;
+    top: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  & .progress-step:nth-child(2) {
-    margin: 0 30%;
     @media (max-width: 768px) {
-      margin: 10rem 0;
+      max-width: 4px;
+      height: 554px;
+      flex-direction: column;
+      margin-left: 19px;
     }
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: var(--primary-grey);
+      border-radius: 100%;
+      width: 12px;
+      height: 12px;
+      left: 0;
+      @media (max-width: 768px) {
+        top: 0;
+        left: -4px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: transparent;
+      border-top: 4px solid var(--primary-grey);
+      border-right: 4px solid var(--primary-grey);
+      z-index: 1;
+      right: 4px;
+      transform: rotate(45deg);
+      @media (max-width: 768px) {
+        bottom: 0;
+        transform: rotate(135deg);
+        right: -10px;
+      }
+    }
+  }
+}
+
+.progress-step {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  background-color: var(--primary-text);
+  border-radius: 100%;
+  display: block;
+
+}
+
+.progress-step:nth-child(2) {
+  margin: 0 30%;
+  @media (max-width: 768px) {
+    margin: 10rem 0;
   }
 }
 
