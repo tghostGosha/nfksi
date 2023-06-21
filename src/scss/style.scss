@@ -590,12 +590,6 @@ td {
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 768px) {
-      max-width: 4px;
-      height: 554px;
-      flex-direction: column;
-      margin-left: 19px;
-    }
     &::before {
       content: "";
       position: absolute;
@@ -605,8 +599,8 @@ td {
       height: 12px;
       left: 0;
       @media (max-width: 768px) {
-        top: 0;
-        left: -4px;
+        top: -4px;
+    left: 0px;
       }
     }
 
@@ -622,9 +616,8 @@ td {
       right: 4px;
       transform: rotate(45deg);
       @media (max-width: 768px) {
-        bottom: 0;
-        transform: rotate(135deg);
-        right: -10px;
+        bottom: -11px;
+        right: 4px;
       }
     }
   }
@@ -640,12 +633,6 @@ td {
 
 }
 
-.progress-step:nth-child(2) {
-  margin: 0 30%;
-  @media (max-width: 768px) {
-    margin: 10rem 0;
-  }
-}
 
 .management {
   & h2 {

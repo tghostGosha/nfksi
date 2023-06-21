@@ -119,11 +119,11 @@ const heroSwiper = new Swiper('.big__banner-swiper', {
   
 });
 
-const hostorySwiper = new Swiper('.swiper__history', {
+const historySwiper = new Swiper('.swiper__history', {
   modules: [Pagination, Autoplay, Navigation],
   loop: true,
-  spaceBetween: 50,
-  slidesPerView: 3,
+  spaceBetween: 32,
+  slidesPerView: 1,
   slidesPerGroup: 1,
   freeMode: true,
   autoplay: {
@@ -133,7 +133,18 @@ const hostorySwiper = new Swiper('.swiper__history', {
   
   },
   speed: 10000,
-  shortSwipes: false,
+  // shortSwipes: false,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    585:{
+      slidesPerView: 2,
+    }
+
+    
+  }
 
 });
 
