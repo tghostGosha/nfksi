@@ -1,0 +1,92 @@
+//стили для выбора лет 2 ндфл
+.choices__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-height: 56px;
+  background-color: var(--primary-grey);
+  border-radius: 5px;
+  border: none;
+  padding: 16px 26px;
+  transition: border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+.choices.is-open.is-focused .choices__inner{
+
+  background-color: var(--primary-grey);
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(20, 136, 20, 0.25);
+}
+.choices__list--multiple .choices__item[data-deletable] {
+  padding: 4px 22px;
+}
+.choices__list--multiple .choices__item {
+  background-color: transparent;
+  border: 1px solid var(--app-button-black-color);
+  color: var(--app-button-black-color);
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0;
+  font-weight: 400;
+  border-radius: 40px;
+  padding: 4px 22px;
+  position: relative;
+}
+
+.choices__input {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  margin: 0;
+  padding: 0 0 0 10px;
+
+}
+.choices__list--dropdown, .choices__list[aria-expanded]  {
+  border: none;
+  padding: 26px 24px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 16px 0px rgba(29, 37, 44, 0.16);
+  margin-top: 1px;
+}
+.choices__list {
+  display: flex;
+  column-gap: 10px;
+}
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+  border-radius: 40px;
+  padding: 5px 22px;
+}
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable{
+  background-color: rgba(244, 246, 248, 1);
+  transition: border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+
+  background-color: var(--primary-text);
+  color: var(--white);
+  font-size: 16px;
+  line-height: 21px;
+}
+.choices__list--multiple .choices__item.is-highlighted {
+  border: 1px solid var(--app-button-black-color);
+  background-color: transparent;
+  position: relative;
+}
+//скрытая кнопка отмены выбора
+.choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+  border: none;
+  background-image: none;
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+}
+
+
+

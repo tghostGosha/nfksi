@@ -146,6 +146,9 @@
 .form-check {
 margin: 26px 0 36px 0;
 }
+.form-check-label {
+  font-size: 14px;
+}
 .modal__form-btn {
   padding: 14px 157px;
 }
@@ -170,4 +173,43 @@ margin: 26px 0 36px 0;
 .just-validate-error-label {
   position: absolute;
 }
+.ndfl-form {
+  width: 100%;
+  max-width: 818px;
+  margin: 0 auto;
+  & span{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primary-text);
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .modal__form-item {
+    display: flex;
+    column-gap: 10px;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+
+    & .just-validate-error-label {
+      bottom: -1.5rem;
+    }
+  }
+  .secondary-text {
+    margin-top: 24px;
+    & a {
+      text-decoration: underline;
+    }
+  }
+
+  .flex-container {
+    justify-content: center;
+  }
+  .modal__form-btn {
+    padding: 15px 62px;
+    line-height: 21px;
+  }
+}
+
 

@@ -14,8 +14,6 @@ import Choices from 'choices.js';
 import bootstrap from 'bootstrap';
 
 
-
-
 // //==============Модальные окна
 
 function OpenModalWindow(el) {
@@ -64,6 +62,44 @@ flsFunctions.isWebp()
 // const greyBackground = document.querySelector('.grey-background-640px');
 // const nav = document.querySelector('.header__nav-app-list');
 
+
+// //======Choices Селект для выбора лет для справки 2ндфл ===
+const customSelect = ()=> {
+  const element = document.querySelector('#choices-multiple-groups')
+  const choices = new Choices(element, {
+    placeholder:true,
+    searchEnabled: false,
+    searchChoices: true,
+    addItems: true,
+    removeItemButton: true,
+    shouldSort:true,
+    shouldSortItems: true,
+    sorter: function(a, b) {
+      return b.label.length - a.label.length;
+    },
+    removeItems: true,
+    placeholderValue: 'Выберите год',
+    noChoicesText: 'Выбраны все года',
+    itemSelectText: '',
+    choices: [{value: '2024', label: '2024'}, {value: '2025', label: '2025'}],
+
+  });
+  let input = element.closest('.choices').querySelector('.choices__input--cloned')
+
+  choices.passedElement.element.addEventListener('change', (event)=> {
+    if(choices._currentState.choices.length === choices._currentState.items.length) {
+      input.setAttribute('readonly', '')
+    }
+  },
+    false,
+  )
+}
+
+try {
+  customSelect()
+} catch (e) {
+
+}
 
 
 //==============================
@@ -211,40 +247,40 @@ try {
 
 
 // //=====Input mask
-// const mask = event => {
-//   const { target, keyCode, type } = event;
+const mask = event => {
+  const { target, keyCode, type } = event;
 
-//   const pos = target.selectionStart;
-//   if (pos < 3) event.preventDefault();
-//   const matrix = '+7 (___) ___-__-__';
-//   let i = 0;
-//   const def = matrix.replace(/\D/g, '');
-//   const val = target.value.replace(/\D/g, '');
-//   let newValue = matrix.replace(/[_\d]/g,
-//     a => (i < val.length ? val[i++] || def[i] : a));
-//   i = newValue.indexOf('_');
-//   if (i !== -1) {
-//     i < 5 && (i = 3);
-//     newValue = newValue.slice(0, i);
-//   }
-//   let reg = matrix.substring(0, target.value.length).replace(/_+/g,
-//     (a) => `\\d{1,${a.length}}`).replace(/[+()]/g, '\\$&');
-//   reg = new RegExp(`^${reg}$`);
-//   if (!reg.test(target.value) || target.value.length < 5 ||
-//     keyCode > 47 && keyCode < 58) {
-//     target.value = newValue;
-//   }
-//   if (type === 'blur' && target.value.length < 5) target.value = '';
-// };
+  const pos = target.selectionStart;
+  if (pos < 3) event.preventDefault();
+  const matrix = '+7 (___) ___-__-__';
+  let i = 0;
+  const def = matrix.replace(/\D/g, '');
+  const val = target.value.replace(/\D/g, '');
+  let newValue = matrix.replace(/[_\d]/g,
+    a => (i < val.length ? val[i++] || def[i] : a));
+  i = newValue.indexOf('_');
+  if (i !== -1) {
+    i < 5 && (i = 3);
+    newValue = newValue.slice(0, i);
+  }
+  let reg = matrix.substring(0, target.value.length).replace(/_+/g,
+    (a) => `\\d{1,${a.length}}`).replace(/[+()]/g, '\\$&');
+  reg = new RegExp(`^${reg}$`);
+  if (!reg.test(target.value) || target.value.length < 5 ||
+    keyCode > 47 && keyCode < 58) {
+    target.value = newValue;
+  }
+  if (type === 'blur' && target.value.length < 5) target.value = '';
+};
 
-// const input = document.getElementById('exampleFormControlInput');
+const input = document.getElementById('application-tel');
 
-// if (input.type === 'tel') {
-//   input.addEventListener('input', mask);
-//   input.addEventListener('focus', mask);
-//   input.addEventListener('blur', mask);
-//   input.addEventListener('keydown', mask);
-// }
+if (input.type === 'tel') {
+  input.addEventListener('input', mask);
+  input.addEventListener('focus', mask);
+  input.addEventListener('blur', mask);
+  input.addEventListener('keydown', mask);
+}
 
 
 
@@ -252,18 +288,18 @@ try {
 
 // //========Валидация формы открытия счета и маска================
 // //======маска телефон
-// try {
+try {
 
-//   const accountFormTel = document.getElementById('tel');
-//   if (accountFormTel.type === 'tel') {
-//     accountFormTel.addEventListener('input', mask);
-//     accountFormTel.addEventListener('focus', mask);
-//     accountFormTel.addEventListener('blur', mask);
-//     accountFormTel.addEventListener('keydown', mask);
-//   }
-// } catch (error) {
+  const accountFormTel = document.getElementById('consultTel');
+  if (accountFormTel.type === 'tel') {
+    accountFormTel.addEventListener('input', mask);
+    accountFormTel.addEventListener('focus', mask);
+    accountFormTel.addEventListener('blur', mask);
+    accountFormTel.addEventListener('keydown', mask);
+  }
+} catch (error) {
 
-// }
+}
 
 // //======заглавная буква
 // try {
@@ -329,9 +365,10 @@ try {
 } catch (error) {
 
 }
-// Валидация 'Консультация'
+
+// Валидация '2-НДфЛ'
 try {
-  const validation = new JustValidate('#consultForm', {
+  const validation = new JustValidate('#ndflForm', {
     errorFieldCssClass: 'is-invalid',
     errorLabelStyle: {
       fontSize: '14px',
@@ -350,23 +387,47 @@ try {
     lockForm: true,
   });
   validation
-    .addField('#consultName', [
+    .addField('#passportSeries', [
       {
         rule: 'minLength',
-        value: 3,
-        errorMessage: 'Фамилия должна содержать не менее 3-х символов ',
+        value: 4,
+        errorMessage: 'Серия паспорта должна содержать 4 цифры',
       },
       {
         rule: 'maxLength',
-        value: 30,
+        value: 4,
       },
       {
         rule: 'required',
         errorMessage: 'Обязательное поле',
       },
     ])
-   
-    .addField('#consultTel', [
+    .addField('#passportNumber', [
+      {
+        rule: 'minLength',
+        value: 6,
+        errorMessage: 'Номер паспорта должна содержать 4 цифры',
+      },
+      {
+        rule: 'maxLength',
+        value: 6,
+      },
+      {
+        rule: 'required',
+        errorMessage: 'Обязательное поле',
+      },
+    ])
+
+    .addField('#INN', [
+      {
+        rule: 'minLength',
+        value: 12,
+        errorMessage: 'Номер ИНН должен содержать 12 цифр',
+      },
+      {
+        rule: 'maxLength',
+        value: 12,
+      },
       {
         rule: 'required',
         errorMessage: 'Обязательное поле',
